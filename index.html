@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="styles.css">
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquirable | Home</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="container">
+        <div class="page-content">
+            <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto; margin: 20px 0 -10px 0;">
+            <h1 class="main-quote" >Everything is Acquirable.</h1>     
+            <div class="main-line">
+                <div class="featured-title">Articles</div>
+                <div class="tag-filter">
+                    <button onclick="addFilter(0,null)" class="article-tag"><img class="tag-image" src="assets/RP-T-1882-A-174.jpg"><span class="tag-text">Tech</span></button>
+                    <button onclick="addFilter(1,null)" class="article-tag"><img class="tag-image" src="assets/RP-P-1904-4047.jpg"><span class="tag-text">Business</span></button>
+                    <button onclick="addFilter(2,null)" class="article-tag"><img class="tag-image" src="assets/RP-P-1904-4052.jpg"><span class="tag-text">Academics</span></button>
+                    <button onclick="addFilter(3,null)" class="article-tag"><img class="tag-image" src="assets/RP-T-1882-A-175.jpg"><span class="tag-text">Literature</span></button>
+                    <button onclick="addFilter(4,null)" class="article-tag"><img class="tag-image" src="assets/RP-T-1921-168.jpg"><span class="tag-text">Philosophy</span></button>
+                    <button onclick="addFilter(5,null)" class="article-tag"><img class="tag-image" src="assets/RP-P-1904-4048.jpg"><span class="tag-text">Psychology</span></button>
+                </div> 
+                <div class="article-container">
+
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="assets/share.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        curateMainPageContent(null, null, 0);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
