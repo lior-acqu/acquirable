@@ -3,7 +3,10 @@ const messageElement = document.getElementById('share-alert-container');
 const explanation = document.querySelector('.explanation');
 const explanationTitle = document.querySelector('.explanation-title');
 const explanationText = document.querySelector('.explanation-text');
+const tagFilter = document.querySelector('.tag-filter');
+const filterButton = document.querySelector('.filter-button');
 var dropDownCounter = 0;
+var tagFilterCounter = 0;
 var currentFilters = [];
 var menu = null;
 //the categories
@@ -201,6 +204,18 @@ setTimeout(() => {
   explanation.style.visibility = 'hidden';
 }, 10000); // 1000ms = 1 second
 } 
+//shows and hides the tag filter options
+function showAndHideTagFilter() {
+  if (tagFilterCounter % 2 === 0) {
+    tagFilter.style.display = 'flex';
+    filterButton.innerHTML = "<ion-icon name='chevron-up-outline'></ion-icon>";
+  } else {
+    tagFilter.style.display = 'none';
+    filterButton.innerHTML = "<ion-icon name='chevron-down-outline'></ion-icon>";
+  }
+  tagFilterCounter++;
+}
+
 //loads the footer on every screen
 function loadFooter() {
   var footerContent = '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2><a href="https://acquirable.ch/mindful-learning">Mindful Learning</a><a href="https://acquirable.ch/study-methods">Study Methods</a><a href="https://acquirable.ch/useful-advice">Useful Advice</a></div><div class="swiss-text">© Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';

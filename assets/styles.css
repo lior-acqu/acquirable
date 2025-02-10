@@ -66,6 +66,7 @@ body {
     margin-right: 20px;
     font-size: 32px;
     display: none;
+    cursor: pointer;
 }
 .dropdown-list {
     display: none;
@@ -257,7 +258,6 @@ body {
 
 
 .tag-filter {
-    display: flex;
     align-items: center;
     justify-content: center;
     width: 90%;
@@ -265,6 +265,13 @@ body {
     flex-wrap: wrap;
     margin-top: 0px;
     margin-bottom: 30px;
+    display: none;
+}
+.filter-button {
+    font-size: 24px;
+    margin-bottom: 15px;
+    margin-top: 0px;
+    cursor: pointer;
 }
 .article-tag {
     background-color: black;
@@ -493,6 +500,7 @@ li {
     font-weight: 400;
     text-align: center;
     font-size: 40px;
+    margin-bottom: 10px;
 }
 .main-post {
     max-width: 900px;
