@@ -12,7 +12,7 @@ var menu = null;
 //the categories
 const headerLinks = [
   {title: "The Magic of Learning", link: "https://www.acquirable.ch"},
-  {title: "Simplifications", link: "https://www.acquirable.ch"},
+  {title: "Acquirable Topics", link: "https://www.acquirable.ch"},
   {title: "Books to Acquire", link: "https://www.acquirable.ch"},
 ]
 //the tags (our topics)
@@ -23,6 +23,7 @@ const tags = [
   {name: "Literature", image: "../../assets/RP-T-1882-A-175.jpg"},
   {name: "Philosophy", image: "../../assets/RP-T-1921-168.jpg"},
   {name: "Psychology", image: "../../assets/RP-P-1904-4048.jpg"},
+  {name: "Art", image: "../../assets/RP-P-1904-4048.jpg"},
 ];
 //the list of all artilces (please add new articles at the top)
 const allArticles = [
