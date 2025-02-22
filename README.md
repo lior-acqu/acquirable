@@ -7,3 +7,4 @@ Apart from writing articles, I also enjoy coding a lot. That is why I built Acqu
 
 ## Links 🎡
 [My Blog (acquirable.ch)](https://www.acquirable.ch)
+<a href="https://www.acquirable.ch" target="_blank">Acqu</a>
