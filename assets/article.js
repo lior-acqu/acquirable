@@ -37,12 +37,6 @@ function showAndHideExplanation(title, text) {
 //adds the tags to a specific article and sets the category
 function setCategoryAndTags(category, allTags) {
   let tagBox = document.querySelector(".article-tags");
-  var link =
-    '<a href="' +
-    headerLinks[category].link +
-    '" class="type-link">- ' +
-    headerLinks[category].title.toUpperCase() +
-    " -</a>";
 
   for (let i = 0; i < allTags.length; i++) {
     let imageLink = tags[allTags[i]].image;
@@ -66,5 +60,17 @@ function setCategoryAndTags(category, allTags) {
   }
 
   var linkBox = document.querySelector(".article-type");
-  linkBox.innerHTML = link;
+  var linkString = "";
+  for (let i = 0; i < category.length; i++) {
+    if (i != 0) {
+      linkString += ", ";
+    }
+    linkString +=
+      '<a href="' +
+      headerLinks[category[i]].link +
+      '" class="type-link">' +
+      headerLinks[category[i]].title +
+      "</a>";
+  }
+  linkBox.innerHTML = linkString;
 }

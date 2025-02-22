@@ -18,12 +18,18 @@ const headerLinks = [
 ];
 //the tags (our topics)
 const tags = [
-  { name: "Psychology", image: "../../assets/RP-T-1882-A-174.jpg" },
-  { name: "Philosophy", image: "../../assets/RP-P-1904-4047.jpg" },
-  { name: "Languages & Literature", image: "../../assets/RP-P-1904-4052.jpg" },
-  { name: "Art & Design", image: "../../assets/RP-T-1882-A-175.jpg" },
-  { name: "Tech & Science", image: "../../assets/RP-T-1921-168.jpg" },
-  { name: "Business", image: "../../assets/RP-P-1904-4048.jpg" },
+  {
+    name: "Psychology",
+    image: "../../assets/natural-patterns/flower-meadow.jpg",
+  },
+  { name: "Philosophy", image: "../../assets/natural-patterns/grass.jpg" },
+  {
+    name: "Languages & Literature",
+    image: "../../assets/natural-patterns/manyships.jpg",
+  },
+  { name: "Art & Design", image: "../../assets/natural-patterns/sky1.jpg" },
+  { name: "Tech & Science", image: "../../assets/natural-patterns/italy.jpg" },
+  { name: "Business", image: "../../assets/natural-patterns/storm.jpg" },
 ];
 //the list of all artilces (please add new articles at the top)
 const allArticles = [
