@@ -6,5 +6,4 @@ Welcome to Acquirable! 👋 Acquirable is a blog with articles about why learnin
 Apart from writing articles, I also enjoy coding a lot. That is why I built Acquirable by hand and upload my code to GitHub.
 
 ## Links 🎡
-[My Blog (acquirable.ch)](https://www.acquirable.ch)
-<a href="https://www.acquirable.ch" target="_blank">Acqu</a>
+<a href="https://www.acquirable.ch" target="_blank">Acquirable - Blog</a>
