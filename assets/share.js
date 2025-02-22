@@ -9,6 +9,7 @@ var dropDownCounter = 0;
 var tagFilterCounter = 0;
 var currentFilters = [];
 var menu = null;
+var category = null;
 //the categories
 const headerLinks = [
   { title: "The Magic of Learning", link: "https://www.acquirable.ch" },
@@ -33,7 +34,7 @@ const allArticles = [
       "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
     description:
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: 0,
+    category: [0, 1],
     tags: [0, 1],
   },
   {
@@ -43,7 +44,7 @@ const allArticles = [
       "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
     description:
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: 0,
+    category: [0],
     tags: [2, 3],
   },
   {
@@ -53,17 +54,21 @@ const allArticles = [
       "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
     description:
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: 0,
+    category: [1, 2],
     tags: [4, 5],
   },
 ];
+function setCategory(givenCategory) {
+  category = givenCategory;
+}
 //filters all articles
 function curateMainPageContent(category, filter, page) {
+  console.log(category, filter, page);
   let categorisedArray = [];
   //first, the category (The Magic of Learning etc.) is filtered
   if (category != null) {
     for (let i = 0; i < allArticles.length; i++) {
-      if (allArticles[i].category == category) {
+      if (allArticles[i].category.includes(category)) {
         categorisedArray.push(allArticles[i]);
       }
     }
@@ -82,6 +87,9 @@ function curateMainPageContent(category, filter, page) {
           filteredArray.push(categorisedArray[i]);
           added = true;
         }
+      }
+      if (filter.length == 0) {
+        filteredArray = categorisedArray;
       }
     }
   } else {
@@ -103,11 +111,12 @@ function buildMainPost(array, page) {
     //build the necessary HTML structure for every article
     let mainTitleText = document.createTextNode(array[i].title);
     let mainDescText = document.createTextNode(array[i].description);
-    let articleDataText = document.createTextNode(
-      headerLinks[array[i].category].title
-    );
+    let articleDataArray = [];
+    for (let j = 0; j < array[i].category.length; j++) {
+      articleDataArray.push(headerLinks[array[i].category[j]].title);
+    }
+    let articleDataText = document.createTextNode(articleDataArray.join(", "));
     let mainImgSrc = array[i].image;
-
     let mainTitle = document.createElement("h1");
     let mainDesc = document.createElement("h2");
     let articleData = document.createElement("p");
@@ -136,13 +145,18 @@ function buildMainPost(array, page) {
 
     mainImg.src = mainImgSrc;
 
-    //alternate between image and text being left or right
-    if (i % 2 == 0) {
-      mainPost.appendChild(mainImg);
-      mainPost.appendChild(postText);
+    //alternate between image and text being left or right if inner window width is big enough
+    if (window.innerWidth > 850) {
+      if (i % 2 == 0) {
+        mainPost.appendChild(mainImg);
+        mainPost.appendChild(postText);
+      } else {
+        mainPost.appendChild(postText);
+        mainPost.appendChild(mainImg);
+      }
     } else {
-      mainPost.appendChild(postText);
       mainPost.appendChild(mainImg);
+      mainPost.appendChild(postText);
     }
 
     document.querySelector(".article-container").appendChild(mainPost);
@@ -172,7 +186,7 @@ function buildMainPost(array, page) {
 }
 
 //adds or removes a tag filter
-function addFilter(number, category) {
+function addFilter(number) {
   const DOMFilters = document.querySelector(".tag-filter");
   const filterTags = DOMFilters.querySelectorAll(":scope > .filter-tag");
   if (currentFilters.includes(number)) {
@@ -330,3 +344,21 @@ function setCategoryAndTags(category, allTags) {
   var linkBox = document.querySelector(".article-type");
   linkBox.innerHTML = link;
 }
+
+let ranFunction = false;
+function handleResize() {
+  if (window.innerWidth <= 850 && ranFunction == false) {
+    console.log("Screen is now less than 850px! Running function...");
+    // Call your function here
+    ranFunction = true;
+    console.log(ranFunction);
+    curateMainPageContent(category, currentFilters, 0);
+  } else if (window.innerWidth > 850) {
+    //only if it is bigger again
+    ranFunction = false;
+    console.log(ranFunction);
+    curateMainPageContent(category, currentFilters, 0);
+  }
+}
+
+window.addEventListener("resize", handleResize);

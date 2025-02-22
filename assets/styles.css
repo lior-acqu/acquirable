@@ -76,9 +76,9 @@ body {
   width: 62vw;
   max-width: 800px;
   height: auto;
-  filter: brightness(1.15) saturate(0.8);
   z-index: -1;
   margin-top: 100px;
+  filter: brightness(1.1);
 }
 .title-line {
   font-family: "Playfair Dislplay", serif;
@@ -90,10 +90,11 @@ body {
   max-width: 700px;
   margin-top: -75px;
   line-height: 1.2;
+  text-shadow: 0px -5px 20px rgba(0, 0, 0, 0.3);
 }
 .title-call {
   font-weight: 400;
-  font-size: 22px;
+  font-size: 21px;
   width: 60vw;
   max-width: 600px;
   line-height: 1.7;
@@ -706,8 +707,8 @@ li {
     height: 30px;
   }
   .tag-image {
-    height: 26px;
-    width: 26px;
+    height: 24px;
+    width: 24px;
   }
   .tag-text {
     font-size: 15px;
