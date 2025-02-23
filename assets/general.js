@@ -12,7 +12,7 @@ var menu = null;
 var category = null;
 //the categories
 const headerLinks = [
-  { title: "The Magic of Learning", link: "https://www.acquirable.ch" },
+  { title: "The Art of Learning", link: "https://www.acquirable.ch" },
   { title: "Acquirable Topics", link: "https://www.acquirable.ch" },
   { title: "Books to Acquire", link: "https://www.acquirable.ch" },
 ];
@@ -41,27 +41,7 @@ const allArticles = [
     description:
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
     category: [0, 1],
-    tags: [0, 1],
-  },
-  {
-    title: "How to Master STEM Subjects by Memorisation",
-    link: "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation",
-    image:
-      "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
-    description:
-      "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: [0],
-    tags: [2, 3],
-  },
-  {
-    title: "How to Master STEM Subjects by Memorisation",
-    link: "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation",
-    image:
-      "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
-    description:
-      "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: [1, 2],
-    tags: [4, 5],
+    tags: [4],
   },
 ];
 
@@ -83,7 +63,7 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2><a href="https://acquirable.ch/mindful-learning">Mindful Learning</a><a href="https://acquirable.ch/study-methods">Study Methods</a><a href="https://acquirable.ch/useful-advice">Useful Advice</a></div><div class="swiss-text">© Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2><a href="https://acquirable.ch/mindful-learning">Mindful Learning</a><a href="https://acquirable.ch/study-methods">Study Methods</a><a href="https://acquirable.ch/useful-advice">Useful Advice</a></div><div class="swiss-text">© 2025 Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
 
   var footer = document.querySelector(".footer");
   footer.innerHTML = footerContent;

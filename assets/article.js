@@ -55,22 +55,25 @@ function setCategoryAndTags(category, allTags) {
 
     tag.appendChild(tagImage);
     tag.appendChild(tagText);
-
-    tagBox.appendChild(tag);
+    if (tagBox != null) {
+      tagBox.appendChild(tag);
+    }
   }
 
   var linkBox = document.querySelector(".article-type");
   var linkString = "";
-  for (let i = 0; i < category.length; i++) {
-    if (i != 0) {
-      linkString += ", ";
+  if (linkBox != null) {
+    for (let i = 0; i < category.length; i++) {
+      if (i != 0) {
+        linkString += ", ";
+      }
+      linkString +=
+        '<a href="' +
+        headerLinks[category[i]].link +
+        '" class="type-link">' +
+        headerLinks[category[i]].title +
+        "</a>";
     }
-    linkString +=
-      '<a href="' +
-      headerLinks[category[i]].link +
-      '" class="type-link">' +
-      headerLinks[category[i]].title +
-      "</a>";
+    linkBox.innerHTML = linkString;
   }
-  linkBox.innerHTML = linkString;
 }

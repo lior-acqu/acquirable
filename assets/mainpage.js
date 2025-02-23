@@ -149,15 +149,19 @@ function addFilter(number) {
 }
 
 //shows and hides the tag filter options
-function showAndHideTagFilter() {
-  if (tagFilterCounter % 2 === 0) {
-    tagFilter.style.display = "flex";
-    filterButton.innerHTML = "<ion-icon name='close-outline'></ion-icon>";
-  } else {
-    tagFilter.style.display = "none";
-    filterButton.innerHTML = "<ion-icon name='apps-outline'></ion-icon>";
+//function showAndHideTagFilter() {
+
+//}
+
+function displayTagFilters() {
+  for (var i = 0; i < tags.length; i++) {
+    tagFilter.innerHTML +=
+      '<button onclick="addFilter(' +
+      i +
+      ')" class="filter-tag">' +
+      tags[i].name +
+      "</button>";
   }
-  tagFilterCounter++;
 }
 
 let ranFunction = false;

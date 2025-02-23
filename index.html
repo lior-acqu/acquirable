@@ -24,18 +24,6 @@
             </div>
             <div class="main-line" id="articles">
                 <div class="tag-filter">
-                    <button onclick="addFilter(0)" class="filter-tag">
-                        Psychology</button>
-                    <button onclick="addFilter(1)" class="filter-tag">
-                        Philosophy</button>
-                    <button onclick="addFilter(2)" class="filter-tag">
-                        Languages & Literature</button>
-                    <button onclick="addFilter(3)" class="filter-tag">
-                        Art & Design</button>
-                    <button onclick="addFilter(4)" class="filter-tag">
-                        Tech & Science</button>
-                    <button onclick="addFilter(5)" class="filter-tag">
-                        Business</button>
                 </div>
                 <div class="article-container">
 
@@ -56,6 +44,7 @@
         loadHeader();
         setCategory(null);
         curateMainPageContent(category, null, 0);
+        displayTagFilters();
     </script>
     <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
     <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>

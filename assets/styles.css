@@ -368,6 +368,11 @@ button {
   margin: 0 15px 0 10px;
   font-weight: 400;
 }
+.tag-link-text {
+  color: #515cd4;
+  margin: 0 15px;
+  font-size: 16px;
+}
 .clicked-tag {
   font-weight: 400;
   border-bottom: 1px black solid;

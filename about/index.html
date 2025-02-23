@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" href="../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Acquirable | About</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="container">
+        <div class="article">
+            <div class="art-header">
+                <img
+                src="title-img.png"
+                alt="title-img" class="title-img">
+                <h1 class="title">About Acquirable</h1>
+                <h2 class="description">
+                    Imagine becoming happier, healthier, more confident, smarter, and more capable every single day of your life. That is the power of lifelong learning. And the best part? Lifelong learning is not reserved for "geniuses" or "naturally gifted" people. It is for everyone.
+                </h2>
+                <h2 class="description">
+                    You can learn anything you want.
+                </h2>
+                <div class="info">
+                    <p>23.02.2025</p>
+                </div>
+                <div class="actions-container">
+                    <button onclick="shareArticleLink(
+                        'Acquirable | Study Methods - Why Mind Maps Are Terrible',
+                        'https://acquirable.ch/mindful-learning/terrible-mind-maps/'
+                    )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+                        <span class="tag-link-text">Share Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class="text-container">
+                <p class="article-text">This is why I created Acquirable. With the right guidance, I believe that anyone can learn anything. Learning isn't about talent; it is about curiosity, strategy, and enjoyment.</p>
+                <p class="article-text">Acquirable supports you on your journey with articles about learning techniques, simple explanations, motivation, and insights from inspiring people.
+                <p class="article-text">Every concept, every skill, every topic. Everything is Acquirable. And acquiring it is worth it.</p>
+                <div class="sub-title">Acquirable's Cause</div>
+                <p class="article-text">We imagine a world in which people embrace lifelong learning, believe in their ability to learn anything, and know how to make it happen.</p>
+                <p class="article-text">Lifelong learning benefits everyone. Both learners and the world around the learners.</p>
+                <div class="sub-title">Values</div>
+                <div class="bullet-container">
+                    <p class="bullet-point" id="memorisation">Simplicity.</p>
+                    <p class="bullet-point">Clarity.</p>
+                    <p class="bullet-point">Reliability.</p>
+                    <p class="bullet-point">Positivity.</p>
+                    <p class="bullet-point">Wanting the best for all lifelong learners and the world around them.</p>
+                </div>
+            </div>
+            <h1 class="main-quote">Everything is Acquirable.</h1>
+        </div>
+    </div>
+    <div class="actions-container">
+        <button onclick="shareArticleLink(
+            'Acquirable | Study Methods - Why Mind Maps Are Terrible',
+            'https://acquirable.ch/mindful-learning/terrible-mind-maps/'
+        )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+            <span class="tag-link-text">Share Article</span>
+        </button>
+    </div>
+    <div class="share-alert-container" id="share-alert-container">
+        <div class="share-alert">
+            <p class="share-header">Thank You!</p>
+            <p class="share-desc">The article link is copied to clipboard.</p>
+            <button onclick="removeMessage();" class="action-content">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <div class="explanation" onclick="hideExplanation()">
+        <div class="explanation-content">
+            <div class="explanation-title"></div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../assets/general.js"></script>
+    <script src="../assets/article.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setCategoryAndTags([0,1],[4])
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
