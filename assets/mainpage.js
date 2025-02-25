@@ -1,3 +1,5 @@
+var filterDropdownCounter = 0;
+
 function setCategory(givenCategory) {
   category = givenCategory;
 }
@@ -129,6 +131,7 @@ function buildMainPost(array, page) {
 function addFilter(number) {
   const DOMFilters = document.querySelector(".tag-filter");
   const filterTags = DOMFilters.querySelectorAll(":scope > .filter-tag");
+  const dropdownTags = document.querySelectorAll(".dropdown-tag");
   if (currentFilters.includes(number)) {
     const index = currentFilters.indexOf(number);
     if (index > -1) {
@@ -136,9 +139,11 @@ function addFilter(number) {
       currentFilters.splice(index, 1); // 2nd parameter means remove one item only
     }
     filterTags[number].classList.remove("clicked-tag");
+    dropdownTags[number].classList.remove("selected");
   } else {
     currentFilters.push(number);
     filterTags[number].classList.add("clicked-tag");
+    dropdownTags[number].classList.add("selected");
   }
   //re-filters the articles, because the filters have changed
   if (currentFilters.length == 0) {
@@ -161,6 +166,28 @@ function displayTagFilters() {
       ')" class="filter-tag">' +
       tags[i].name +
       "</button>";
+  }
+  tagFilter.innerHTML +=
+    '<div class="dropdown" style="padding-bottom: 10px;"><ion-icon onclick="showDropdownFilters();" name="reorder-three-outline"></ion-icon><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
+}
+
+function showDropdownFilters() {
+  if (dropDownCounter % 2 === 0) {
+    menu.style.display = "flex";
+    menu.innerHTML = "";
+    for (var i = 0; i < tags.length; i++) {
+      menu.innerHTML +=
+        '<button onclick="addFilter(' +
+        i +
+        ')" class="dropdown-tag">' +
+        tags[i].name +
+        "</button>";
+    }
+    menu.innerHTML +=
+      '<ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon>';
+    dropDownCounter++;
+  } else {
+    closeDropDown();
   }
 }
 

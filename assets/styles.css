@@ -122,7 +122,8 @@ body {
   display: none;
   cursor: pointer;
 }
-.dropdown-list {
+.dropdown-list,
+.dropdown-filter {
   display: none;
   align-items: center;
   justify-content: flex-start;
@@ -151,6 +152,20 @@ body {
   text-align: center;
 }
 .dropdown-list .header-link:hover {
+  color: #515cd4;
+}
+.dropdown-tag {
+  margin-bottom: 15px;
+  font-size: 17px;
+  text-align: center;
+  border: none;
+  padding: 0;
+  background-color: transparent;
+}
+.dropdown-tag:hover {
+  color: #515cd4;
+}
+.selected {
   color: #515cd4;
 }
 .container {
@@ -678,6 +693,9 @@ li {
     display: flex;
     align-items: center;
     justify-content: center;
+  }
+  .tag-filter .filter-tag {
+    display: none;
   }
   .title {
     font-size: 48px;

@@ -49,6 +49,17 @@ const allArticles = [
 function dropDown() {
   if (dropDownCounter % 2 === 0) {
     menu.style.display = "flex";
+    menu.innerHTML = "";
+    for (j = 0; j < headerLinks.length; j++) {
+      menu.innerHTML +=
+        '<a href="' +
+        headerLinks[j].link +
+        '" class="header-link">' +
+        headerLinks[j].title +
+        "</a>";
+    }
+    menu.innerHTML +=
+      '<ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon>';
     dropDownCounter++;
   } else {
     closeDropDown();
