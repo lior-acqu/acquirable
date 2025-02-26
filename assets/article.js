@@ -14,25 +14,6 @@ function shareArticleLink(text, link) {
 function removeMessage() {
   messageElement.style.visibility = "hidden";
 }
-//shows the explanation of a word
-function showExplanation(title, text) {
-  explanation.style.visibility = "visible";
-  explanationTitle.innerHTML = title;
-  explanationText.innerHTML = text;
-}
-//hides the explanation
-function hideExplanation() {
-  explanation.style.visibility = "hidden";
-}
-//lets the explanation disappear (on mobile)
-function showAndHideExplanation(title, text) {
-  explanation.style.visibility = "visible";
-  explanationTitle.innerHTML = title;
-  explanationText.innerHTML = text;
-  setTimeout(() => {
-    explanation.style.visibility = "hidden";
-  }, 10000); // 1000ms = 1 second
-}
 
 //adds the tags to a specific article and sets the category
 function setCategoryAndTags(category, allTags) {

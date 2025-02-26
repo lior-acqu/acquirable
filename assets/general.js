@@ -12,9 +12,24 @@ var menu = null;
 var category = null;
 //the categories
 const headerLinks = [
-  { title: "The Art of Learning", link: "https://www.acquirable.ch" },
-  { title: "Acquirable Topics", link: "https://www.acquirable.ch" },
-  { title: "Books to Acquire", link: "https://www.acquirable.ch" },
+  {
+    title: "The Magic of Learning",
+    link: "https://www.acquirable.ch",
+    description:
+      "Lifelong learning is fantastic! On <i>The Magic of Learning</i>, you find fascinating articles about learning advice, methods, tools, techniques and many other inspiring ideas.",
+  },
+  {
+    title: "Acquirable Topics",
+    link: "https://www.acquirable.ch",
+    description:
+      "Every complex topic can be explained simply without dumbing it down. To showcase this, I created <i>Acquirable Topics</i>, a library full of interesting articles about complex topics and ideas, presented in clear and simple terms.",
+  },
+  {
+    title: "Books to Acquire",
+    link: "https://www.acquirable.ch",
+    description:
+      "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. On <i>Books to Acquire</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
+  },
 ];
 //the tags (our topics)
 const tags = [
@@ -107,6 +122,26 @@ function loadHeader() {
   var header = document.querySelector(".header");
   header.innerHTML = finalLink;
   menu = document.querySelector(".dropdown-list");
+}
+
+//shows the explanation of a word
+function showExplanation(title, text) {
+  explanation.style.visibility = "visible";
+  explanationTitle.innerHTML = title;
+  explanationText.innerHTML = text;
+}
+//hides the explanation
+function hideExplanation() {
+  explanation.style.visibility = "hidden";
+}
+//lets the explanation disappear (on mobile)
+function showAndHideExplanation(title, text) {
+  explanation.style.visibility = "visible";
+  explanationTitle.innerHTML = title;
+  explanationText.innerHTML = text;
+  setTimeout(() => {
+    explanation.style.visibility = "hidden";
+  }, 10000); // 1000ms = 1 second
 }
 
 //hides the loader

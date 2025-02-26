@@ -129,6 +129,7 @@ function buildMainPost(array, page) {
 
 //adds or removes a tag filter
 function addFilter(number) {
+  console.log(dropDownCounter);
   const DOMFilters = document.querySelector(".tag-filter");
   const filterTags = DOMFilters.querySelectorAll(":scope > .filter-tag");
   const dropdownTags = document.querySelectorAll(".dropdown-tag");
@@ -139,11 +140,15 @@ function addFilter(number) {
       currentFilters.splice(index, 1); // 2nd parameter means remove one item only
     }
     filterTags[number].classList.remove("clicked-tag");
-    dropdownTags[number].classList.remove("selected");
+    if (dropDownCounter % 2 == 1) {
+      dropdownTags[number].classList.remove("selected");
+    }
   } else {
     currentFilters.push(number);
     filterTags[number].classList.add("clicked-tag");
-    dropdownTags[number].classList.add("selected");
+    if (dropDownCounter % 2 == 1) {
+      dropdownTags[number].classList.add("selected");
+    }
   }
   //re-filters the articles, because the filters have changed
   if (currentFilters.length == 0) {
