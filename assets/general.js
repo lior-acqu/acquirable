@@ -55,7 +55,7 @@ const allArticles = [
       "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
     description:
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
-    category: [0, 1],
+    category: [0],
     tags: [4],
   },
 ];

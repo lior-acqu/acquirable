@@ -5,13 +5,17 @@ function setCategory(givenCategory) {
 }
 
 function curateMainPageContent(category, filter, page) {
-  console.log(category, filter, page);
   let categorisedArray = [];
+  let addedCategory = false;
   //first, the category (The Magic of Learning etc.) is filtered
   if (category != null) {
     for (let i = 0; i < allArticles.length; i++) {
-      if (allArticles[i].category.includes(category)) {
-        categorisedArray.push(allArticles[i]);
+      addedCategory = false;
+      for (let j = 0; j < category.length; j++) {
+        if (allArticles[i].category.includes(category[j])) {
+          categorisedArray.push(allArticles[i]);
+          addedCategory = true;
+        }
       }
     }
   } else {
@@ -19,15 +23,15 @@ function curateMainPageContent(category, filter, page) {
   }
 
   let filteredArray = [];
-  let added = false;
+  let addedFilter = false;
   //then, the tag (Tech, Business etc.) is filtered
   if (filter != null) {
     for (let i = 0; i < categorisedArray.length; i++) {
-      added = false;
+      addedFilter = false;
       for (let j = 0; j < filter.length; j++) {
         if (categorisedArray[i].tags.includes(filter[j]) && !added) {
           filteredArray.push(categorisedArray[i]);
-          added = true;
+          addedFilter = true;
         }
       }
       if (filter.length == 0) {
@@ -129,7 +133,6 @@ function buildMainPost(array, page) {
 
 //adds or removes a tag filter
 function addFilter(number) {
-  console.log(dropDownCounter);
   const DOMFilters = document.querySelector(".tag-filter");
   const filterTags = DOMFilters.querySelectorAll(":scope > .filter-tag");
   const dropdownTags = document.querySelectorAll(".dropdown-tag");
@@ -199,15 +202,12 @@ function showDropdownFilters() {
 let ranFunction = false;
 function handleResize() {
   if (window.innerWidth <= 850 && ranFunction == false) {
-    console.log("Screen is now less than 850px! Running function...");
     // Call your function here
     ranFunction = true;
-    console.log(ranFunction);
     curateMainPageContent(category, currentFilters, 0);
   } else if (window.innerWidth > 850) {
     //only if it is bigger again
     ranFunction = false;
-    console.log(ranFunction);
     curateMainPageContent(category, currentFilters, 0);
   }
 }
