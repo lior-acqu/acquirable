@@ -55,12 +55,10 @@ function curateSuggestions(filter) {
     filteredArray = categorisedArray;
   }
   //after the filtered array is created, buildMainPost() now displays all articles on screen
-  //buildSuggestions(filteredArray);
+  buildSuggestions(filteredArray);
 }
 
 function buildSuggestions(array) {
-  // empty everything except for what we need
-  document.querySelector(".article-container").innerHTML = "";
   //check if there is an entry
   if (array.length == 0) {
     document.querySelector(".article-container").innerHTML =
@@ -84,13 +82,13 @@ function buildSuggestions(array) {
     let postTags = document.createElement("div");
     let mainPost = document.createElement("a");
 
-    mainTitle.classList.add("main-title");
+    mainTitle.classList.add("main-title-article");
     mainDesc.classList.add("main-desc");
     articleData.classList.add("article-data");
-    mainImg.classList.add("main-img");
-    postText.classList.add("post-text");
-    postTags.classList.add("post-tags");
-    mainPost.classList.add("main-post");
+    mainImg.classList.add("main-img-article");
+    postText.classList.add("post-text-article");
+    postTags.classList.add("post-tags-article");
+    mainPost.classList.add("main-post-article");
 
     mainTitle.appendChild(mainTitleText);
     mainDesc.appendChild(mainDescText);
@@ -104,19 +102,8 @@ function buildSuggestions(array) {
 
     mainImg.src = mainImgSrc;
 
-    //alternate between image and text being left or right if inner window width is big enough
-    if (window.innerWidth > 850) {
-      if (i % 2 == 0) {
-        mainPost.appendChild(mainImg);
-        mainPost.appendChild(postText);
-      } else {
-        mainPost.appendChild(postText);
-        mainPost.appendChild(mainImg);
-      }
-    } else {
-      mainPost.appendChild(mainImg);
-      mainPost.appendChild(postText);
-    }
+    mainPost.appendChild(mainImg);
+    mainPost.appendChild(postText);
 
     document.querySelector(".article-container").appendChild(mainPost);
 
@@ -139,7 +126,7 @@ function buildSuggestions(array) {
       tag.appendChild(tagImage);
       tag.appendChild(tagText);
 
-      document.querySelectorAll(".post-tags")[i].appendChild(tag);
+      document.querySelectorAll(".post-tags-article")[i].appendChild(tag);
     }
   }
 }
