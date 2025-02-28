@@ -12,7 +12,7 @@ function curateMainPageContent(category, filter, page) {
     for (let i = 0; i < allArticles.length; i++) {
       addedCategory = false;
       for (let j = 0; j < category.length; j++) {
-        if (allArticles[i].category.includes(category[j])) {
+        if (allArticles[i].category.includes(category[j]) && !addedCategory) {
           categorisedArray.push(allArticles[i]);
           addedCategory = true;
         }
@@ -29,7 +29,7 @@ function curateMainPageContent(category, filter, page) {
     for (let i = 0; i < categorisedArray.length; i++) {
       addedFilter = false;
       for (let j = 0; j < filter.length; j++) {
-        if (categorisedArray[i].tags.includes(filter[j]) && !added) {
+        if (categorisedArray[i].tags.includes(filter[j]) && !addedFilter) {
           filteredArray.push(categorisedArray[i]);
           addedFilter = true;
         }
