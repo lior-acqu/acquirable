@@ -10,7 +10,6 @@ var tagFilterCounter = 0;
 var currentFilters = [];
 var menu = null;
 var category = null;
-var csrfToken = null;
 var pageAnaId = null;
 //the categories
 const headerLinks = [
@@ -158,34 +157,9 @@ function setPageAnaId(id) {
   pageAnaId = id;
 }
 
-function anaClick(name) {
-  if (!csrfToken) return;
-
-  fetch("assets/analytics.php", {
-    method: "POST",
-    headers: { "Content-Type": "application/json" },
-    body: JSON.stringify({
-      name: name,
-      token: csrfToken,
-    }),
-  })
-    .then((response) => response.json())
-    .catch((error) => console.error("Error:", error));
-}
-
-// Attach event listeners to buttons and links
-document.querySelectorAll("a").forEach((element) => {
-  element.addEventListener("click", function () {
-    const anaName = this.attributes.anaid.nodeValue;
-    console.log(anaName);
-    if (anaName) {
-      anaClick(anaName);
-    }
-  });
-});
-
 //hides the loader
 window.addEventListener("load", function () {
+  var csrfToken = null;
   document.querySelector(".loader").style.display = "none";
 
   // Fetch CSRF token from PHP
@@ -197,4 +171,30 @@ window.addEventListener("load", function () {
     .then(() => {
       anaClick(pageAnaId);
     });
+
+  function anaClick(name) {
+    if (!csrfToken) return;
+
+    fetch("assets/analytics.php", {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify({
+        name: name,
+        token: csrfToken,
+      }),
+    })
+      .then((response) => response.json())
+      .catch((error) => console.error("Error:", error));
+  }
+
+  // Attach event listeners to buttons and links
+  document.querySelectorAll("a").forEach((element) => {
+    element.addEventListener("click", function () {
+      const anaName = this.attributes.anaid.nodeValue;
+      console.log(anaName);
+      if (anaName) {
+        anaClick(anaName);
+      }
+    });
+  });
 });
