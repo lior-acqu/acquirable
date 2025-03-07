@@ -1,0 +1,154 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="icon" href="../../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="STEM subjects present a significant challenge for many students. Here's how to master them.">
+    <title>Acquirable | How to Create Stunningly Looking Papers</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="container">
+        <div class="article">
+            <div class="art-header">
+                <!-- This is the title image, it is always title.jpg or title.png, please also change it in the general.js file -->
+                <img
+                src="title.jpg"
+                alt="title-img" class="title-img">
+                <!-- This is the title, it is changed automatically via general.js and article.js, as well as the type and the tags-->               
+                <h1 class="title">Acquirable Title</h1>
+                <div class="article-type">
+                </div>
+                <div class="article-tags">
+                </div>
+                <!-- Add a description for some context, explanations can be added anywhere with the show-explanation span -->
+                <h2 class="description"><span class="show-explanation" onmouseout="hideExplanation()" onmouseover="showExplanation(
+                    'This',
+                    'The word is explained here'
+                );"
+                onclick="showAndHideExplanation(
+                    'This',
+                    'The word is explained here'
+                );">This</span> 
+                is the description.
+                </h2>
+                <h2 class="description">It can also have two parts or three. Just keep it simple.</h2>
+                <!-- Do not forget to change the date -->
+                <div class="info">
+                    <p>02.01.2025</p>
+                </div>
+                <!-- The share button automatically gets the correct link -->
+                <div class="actions-container" id="upperShare" anaid="upperShareButton">
+                    <button onclick="shareArticleLink(
+                        'Acquirable | Study Methods - Why Mind Maps Are Terrible',
+                        'https://acquirable.ch/mindful-learning/terrible-mind-maps/'
+                    )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+                        <span class="tag-link-text">Share Article</span>
+                    </button>
+                </div>
+            </div>
+            <!-- For correct formatting, always use text inside a text container -->
+            <div class="text-container">
+                <div class="sub-title">This is a paragraph with a title</div>
+                <p class="article-text">An explanation might also appear 
+                    <span class="show-explanation" onmouseout="hideExplanation()" onmouseover="showExplanation(
+                        'here',
+                        'At this place'
+                    );"
+                    onclick="showAndHideExplanation(
+                        'here',
+                        'At this place'
+                    );">here</span>.</p>
+                <p class="article-text">You may also add two paragraphs.
+                <p class="article-text">Or three.</p>
+                <div class="focus">
+                    <div class="sub-title">Focus, Great for Quotes</div>
+                    <p class="article-text">Lorem ipsum dolor sit, amet consectetur
+                        adipisicing elit. Numquam, ipsum rem! Ad vero ratione, pariatur 
+                        ducimus magni laboriosam asperiores obcaecati iure animi unde 
+                        officiis consectetur a quae voluptatibus fugiat voluptas! Ad vero ratione, pariatur 
+                        ducimus magni laboriosam asperiores obcaecati iure animi unde 
+                        officiis consectetur a quae voluptatibus fugiat voluptas!</p>
+                </div>
+                <p class="article-text">Here are some bullet points:</p>
+                <div class="bullet-container">
+                    <p class="bullet-point" id="memorisation">This is one.</p>
+                    <p class="bullet-point">This is another one.</p>
+                </div>
+                <p class="article-text">Now, some normal text again.</p>
+                <p class="article-text">Wow, a link! Click<a href="https://www.acquirable.ch" target="_blank"> here</a>. Remember to always add target="_blank".</p>
+            </div>
+            <!-- The image is outside of the text-container -->
+            <div class="graphic">
+                <img src="title.jpg" alt="attention-space" class="article-img"
+                style="width: 60%; text-align: center;">
+                <p class="img-desc">This is an image with a description. The width of the image may be 60% or 100%
+                </p>
+            </div>
+            <!-- Now, we add one again, there always must be a text-container at the end for the conclusion, sources and article suggestions -->
+            <div class="text-container">
+                <div class="sub-title">Acquired: Conclusion</div>
+                <div class="bullet-container">
+                    <p class="bullet-point">A conclusion.</p>
+                    <p class="bullet-point">Another one.</p>
+                </div>
+                <div class="sub-title">Sources</div>
+                <div class="source-container">
+                    <a anaid="testButton" href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">The Organic Chemistry Tutor</a>
+                    <a href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">Die Leiden des jungen Werther</a>
+                </div>
+                <div class="article-container" style="border-top: 1px solid #e7e7e7; padding: 50px 0; margin: 50px 0 0 0;">
+                    <div class="sub-title" style="text-align: center;">Popular Articles for You</div>
+                </div>
+            </div>
+            <!-- Always add our signature quote -->
+            <h1 class="main-quote">Everything is Acquirable.</h1>
+        </div>
+    </div>
+    <!-- Another automatic share -->
+    <div class="actions-container">
+        <button id="lowerShare" anaid="lowerShareButton" onclick="shareArticleLink(
+            'Acquirable | Study Methods - Why Mind Maps Are Terrible',
+            'https://acquirable.ch/mindful-learning/terrible-mind-maps/'
+        )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+            <span class="tag-link-text">Share Article</span>
+        </button>
+    </div>
+    <!-- Useful stuff, you do not need to change anything here -->
+    <div class="share-alert-container" id="share-alert-container">
+        <div class="share-alert">
+            <p class="share-header">Thank You!</p>
+            <p class="share-desc">The article link is copied to clipboard.</p>
+            <button onclick="removeMessage();" class="action-content">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+    <div class="explanation" onclick="hideExplanation()">
+        <div class="explanation-content">
+            <div class="explanation-title"></div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../../assets/general.js"></script>
+    <script src="../../assets/article.js"></script>
+    <script>
+        // here, just change the setPageAnaId(nameOfPage); and the findArticleData(id);
+        loadFooter();
+        loadHeader();
+        setPageAnaId("demoPage");
+        findArticleData(1);
+    </script>
+    <script type="module" src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"></script>
+</body>
+</html>

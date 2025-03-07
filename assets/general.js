@@ -58,6 +58,7 @@ const allArticles = [
       "STEM subjects present a significant challenge for many students. Here's how to master them.",
     category: [0],
     tags: [4],
+    articleId: 0,
   },
 ];
 

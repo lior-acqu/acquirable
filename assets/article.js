@@ -1,3 +1,34 @@
+function findArticleData(id) {
+  var foundArticle = {};
+  for (let i = 0; i < allArticles.length; i++) {
+    if (allArticles[i].articleId == id) {
+      setCategoryAndTags(allArticles[i].category, allArticles[i].tags);
+      curateSuggestions(null, id);
+      document
+        .getElementById("upperShare")
+        .setAttribute(
+          "onclick",
+          "shareArticleLink('Acquirable | " +
+            allArticles[i].title +
+            "','" +
+            allArticles[i].link +
+            "')"
+        );
+      document
+        .getElementById("lowerShare")
+        .setAttribute(
+          "onclick",
+          "shareArticleLink('Acquirable | " +
+            allArticles[i].title +
+            "','" +
+            allArticles[i].link +
+            "')"
+        );
+      document.querySelector(".title").innerHTML = allArticles[i].title;
+    }
+  }
+}
+
 //function for sharing the article link
 function shareArticleLink(text, link) {
   navigator.clipboard.writeText(text + ": " + link);
@@ -16,23 +47,31 @@ function removeMessage() {
 }
 
 // makes suggestions based on the current article
-function curateSuggestions(filter) {
-  console.log(category, filter);
+function curateSuggestions(filter, articleId) {
+  let otherArticlesArray = [];
+  for (let i = 0; i < allArticles.length; i++) {
+    if (allArticles[i].articleId != articleId) {
+      otherArticlesArray.push(allArticles[i]);
+    }
+  }
   let categorisedArray = [];
   let addedCategory = false;
   //first, the category (The Magic of Learning etc.) is filtered
   if (category != null) {
-    for (let i = 0; i < allArticles.length; i++) {
+    for (let i = 0; i < otherArticlesArray.length; i++) {
       addedCategory = false;
       for (let j = 0; j < category.length; j++) {
-        if (allArticles[i].category.includes(category[j])) {
-          categorisedArray.push(allArticles[i]);
+        if (
+          otherArticlesArray[i].category.includes(category[j]) &&
+          !addedCategory
+        ) {
+          categorisedArray.push(otherArticlesArray[i]);
           addedCategory = true;
         }
       }
     }
   } else {
-    categorisedArray = allArticles;
+    categorisedArray = otherArticlesArray;
   }
 
   let filteredArray = [];
