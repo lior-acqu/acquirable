@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="assets/styles.css">
     <link rel="icon" href="assets/icon_gray.ico" type="image/x-icon">
     <meta charset="UTF-8">
@@ -17,7 +18,7 @@
                 <img src="assets/acqu_titleimg.png" alt="Raphael_School_of_Athens" class="title-line-img">
                 <h1 class="title-line">Everything is Acquirable.</h1>
                 <h2 class="title-call">Learn anything you want. Acquirable supports you on your journey.</h2>
-                <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+                <a href="#articles" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
                     <span class="tag-link-text">Explore Articles</span>
                 </a>
             </div>
@@ -42,7 +43,6 @@
     <script>
         loadFooter();
         loadHeader();
-        setPageAnaId("mainPage");
         setCategory(null);
         curateMainPageContent(category, null, 0);
         displayTagFilters();

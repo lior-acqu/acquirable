@@ -2,3 +2,4 @@ legallyok.html
 **/*.jpg
 **/*.png
 **/*.svg
+**/*.env

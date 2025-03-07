@@ -10,23 +10,25 @@ var tagFilterCounter = 0;
 var currentFilters = [];
 var menu = null;
 var category = null;
+var csrfToken = null;
+var pageAnaId = null;
 //the categories
 const headerLinks = [
   {
     title: "The Magic of Learning",
-    link: "https://www.acquirable.ch",
+    link: "https://www.acquirable.ch/the-magic-of-learning",
     description:
       "Lifelong learning is fantastic! On <i>The Magic of Learning</i>, you find fascinating articles about learning advice, methods, tools, techniques and many other inspiring ideas.",
   },
   {
     title: "Acquirable Topics",
-    link: "https://www.acquirable.ch",
+    link: "https://www.acquirable.ch/acquirable-topics",
     description:
       "Every complex topic can be explained simply without dumbing it down. To showcase this, I created <i>Acquirable Topics</i>, a library full of interesting articles about complex topics and ideas, presented in clear and simple terms.",
   },
   {
     title: "Books to Acquire",
-    link: "https://www.acquirable.ch",
+    link: "https://www.acquirable.ch/books-to-acquire",
     description:
       "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. On <i>Books to Acquire</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
   },
@@ -89,7 +91,15 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2><a href="https://acquirable.ch/mindful-learning">Mindful Learning</a><a href="https://acquirable.ch/study-methods">Study Methods</a><a href="https://acquirable.ch/useful-advice">Useful Advice</a></div><div class="swiss-text">© 2025 Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2>';
+
+  for (i = 0; i < headerLinks.length; i++) {
+    footerContent +=
+      '<a href="' + headerLinks[i].link + '">' + headerLinks[i].title + "</a>";
+  }
+
+  footerContent +=
+    '</div><div class="swiss-text">© 2025 Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
 
   var footer = document.querySelector(".footer");
   footer.innerHTML = footerContent;
@@ -144,7 +154,47 @@ function showAndHideExplanation(title, text) {
   }, 10000); // 1000ms = 1 second
 }
 
+function setPageAnaId(id) {
+  pageAnaId = id;
+}
+
+function anaClick(name) {
+  if (!csrfToken) return;
+
+  fetch("assets/analytics.php", {
+    method: "POST",
+    headers: { "Content-Type": "application/json" },
+    body: JSON.stringify({
+      name: name,
+      token: csrfToken,
+    }),
+  })
+    .then((response) => response.json())
+    .catch((error) => console.error("Error:", error));
+}
+
+// Attach event listeners to buttons and links
+document.querySelectorAll("a").forEach((element) => {
+  element.addEventListener("click", function () {
+    const anaName = this.attributes.anaid.nodeValue;
+    console.log(anaName);
+    if (anaName) {
+      anaClick(anaName);
+    }
+  });
+});
+
 //hides the loader
 window.addEventListener("load", function () {
   document.querySelector(".loader").style.display = "none";
+
+  // Fetch CSRF token from PHP
+  fetch("assets/analytics.php")
+    .then((response) => response.json())
+    .then((data) => {
+      csrfToken = data.csrf_token;
+    })
+    .then(() => {
+      anaClick(pageAnaId);
+    });
 });

@@ -161,11 +161,7 @@ function addFilter(number) {
   }
 }
 
-//shows and hides the tag filter options
-//function showAndHideTagFilter() {
-
-//}
-
+// shows the new tag filters
 function displayTagFilters() {
   for (var i = 0; i < tags.length; i++) {
     tagFilter.innerHTML +=
@@ -179,6 +175,7 @@ function displayTagFilters() {
     '<div class="dropdown" style="padding-bottom: 10px;"><ion-icon onclick="showDropdownFilters();" name="reorder-three-outline"></ion-icon><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
 }
 
+// if screen is too small, this shows the dropdown with the tag filters
 function showDropdownFilters() {
   if (dropDownCounter % 2 === 0) {
     menu.style.display = "flex";
@@ -200,6 +197,8 @@ function showDropdownFilters() {
 }
 
 let ranFunction = false;
+
+// this checks if the screen is too small for the big display settings
 function handleResize() {
   if (window.innerWidth <= 850 && ranFunction == false) {
     // Call your function here
@@ -211,5 +210,15 @@ function handleResize() {
     curateMainPageContent(category, currentFilters, 0);
   }
 }
+
+// small parallax effect with title image
+const initialImageMargin = 0;
+var newImageMargin = 0;
+window.addEventListener("scroll", () => {
+  var scroll = window.scrollY;
+  newImageMarginBottom = initialImageMargin + scroll / 5; // change intensity of parallax
+  document.querySelector(".title-line-img").style.marginBottom =
+    newImageMarginBottom + "px";
+});
 
 window.addEventListener("resize", handleResize);
