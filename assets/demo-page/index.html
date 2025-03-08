@@ -41,11 +41,11 @@
                     <p>02.01.2025</p>
                 </div>
                 <!-- The share button automatically gets the correct link -->
-                <div class="actions-container" id="upperShare" anaid="upperShareButton">
+                <div class="actions-container" id="upperShare">
                     <button onclick="shareArticleLink(
                         'Acquirable | Study Methods - Why Mind Maps Are Terrible',
                         'https://acquirable.ch/mindful-learning/terrible-mind-maps/'
-                    )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
+                    )" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;"  anaid="upperShareButton">
                         <span class="tag-link-text">Share Article</span>
                     </button>
                 </div>
@@ -79,7 +79,7 @@
                     <p class="bullet-point">This is another one.</p>
                 </div>
                 <p class="article-text">Now, some normal text again.</p>
-                <p class="article-text">Wow, a link! Click<a href="https://www.acquirable.ch" target="_blank"> here</a>. Remember to always add target="_blank".</p>
+                <p class="article-text">Wow, a link! Click<a anaid="articleLinkButton" href="https://www.acquirable.ch" target="_blank"> here</a>. Remember to always add target="_blank".</p>
             </div>
             <!-- The image is outside of the text-container -->
             <div class="graphic">
@@ -97,8 +97,8 @@
                 </div>
                 <div class="sub-title">Sources</div>
                 <div class="source-container">
-                    <a anaid="testButton" href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">The Organic Chemistry Tutor</a>
-                    <a href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">Die Leiden des jungen Werther</a>
+                    <a anaid="sourceButton" href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">The Organic Chemistry Tutor</a>
+                    <a anaid="sourceButton" href="https://www.youtube.com/channel/UCEWpbFLzoYGPfuWUMFPSaoA" target="_blank" class="source">Die Leiden des jungen Werther</a>
                 </div>
                 <div class="article-container" style="border-top: 1px solid #e7e7e7; padding: 50px 0; margin: 50px 0 0 0;">
                     <div class="sub-title" style="text-align: center;">Popular Articles for You</div>
@@ -122,12 +122,12 @@
         <div class="share-alert">
             <p class="share-header">Thank You!</p>
             <p class="share-desc">The article link is copied to clipboard.</p>
-            <button onclick="removeMessage();" class="action-content">
+            <button onclick="removeMessage();" class="action-content" anaid="closeMessageButton">
                 <ion-icon name="close-outline"></ion-icon>
             </button>
         </div>
     </div>
-    <div class="explanation" onclick="hideExplanation()">
+    <div class="explanation" onclick="hideExplanation()" anaid="closeExplanationButton">
         <div class="explanation-content">
             <div class="explanation-title"></div>
             <div class="explanation-text"></div>

@@ -167,7 +167,7 @@ function displayTagFilters() {
     tagFilter.innerHTML +=
       '<button onclick="addFilter(' +
       i +
-      ')" class="filter-tag">' +
+      ')" class="filter-tag" anaid="filterButton">' +
       tags[i].name +
       "</button>";
   }
@@ -184,7 +184,7 @@ function showDropdownFilters() {
       menu.innerHTML +=
         '<button onclick="addFilter(' +
         i +
-        ')" class="dropdown-tag">' +
+        ')" class="dropdown-tag" anaid="filterButton">' +
         tags[i].name +
         "</button>";
     }

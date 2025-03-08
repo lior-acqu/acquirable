@@ -207,7 +207,7 @@ function setCategoryAndTags(givenCategory, allTags) {
       linkString +=
         '<a href="' +
         headerLinks[givenCategory[i]].link +
-        '" class="type-link">' +
+        '" class="type-link" anaid="articleTypeLinkButton">' +
         headerLinks[givenCategory[i]].title +
         "</a>";
     }

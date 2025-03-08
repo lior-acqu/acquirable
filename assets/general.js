@@ -71,7 +71,7 @@ function dropDown() {
       menu.innerHTML +=
         '<a href="' +
         headerLinks[j].link +
-        '" class="header-link">' +
+        '" class="header-link" anaid="headerLinkButton">' +
         headerLinks[j].title +
         "</a>";
     }
@@ -91,11 +91,15 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch">Home</a><a href="https://acquirable.ch/about">About Acquirable</a><a href="https://acquirable.ch/useful-advice">Privacy Policy</a><h2 class="footer-title">Content</h2>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="footerLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="footerLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="footerLinkButton">Privacy Policy</a><h2 class="footer-title">Content</h2>';
 
   for (i = 0; i < headerLinks.length; i++) {
     footerContent +=
-      '<a href="' + headerLinks[i].link + '">' + headerLinks[i].title + "</a>";
+      '<a href="' +
+      headerLinks[i].link +
+      '"  anaid="footerLinkButton">' +
+      headerLinks[i].title +
+      "</a>";
   }
 
   footerContent +=
@@ -112,7 +116,7 @@ function loadHeader() {
     finalLink +=
       '<a href="' +
       headerLinks[i].link +
-      '" class="header-link">' +
+      '" class="header-link" anaid="headerLinkButton">' +
       headerLinks[i].title +
       "</a>";
   }
@@ -122,7 +126,7 @@ function loadHeader() {
     finalLink +=
       '<a href="' +
       headerLinks[j].link +
-      '" class="header-link">' +
+      '" class="header-link" anaid="headerLinkButton">' +
       headerLinks[j].title +
       "</a>";
   }
