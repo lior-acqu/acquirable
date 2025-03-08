@@ -221,4 +221,35 @@ window.addEventListener("scroll", () => {
     newImageMarginBottom + "px";
 });
 
+// make the screen transition from dark to light on scroll
+function enlightenScreen(startColor) {
+  var start = startColor;
+  var end = [255, 255, 255];
+  var maxPx = 600;
+  var redDifference = end[0] - start[0];
+  var greenDifference = end[1] - start[1];
+  var blueDifference = end[2] - start[2];
+  var redPerPx = redDifference / maxPx;
+  var greenPerPx = greenDifference / maxPx;
+  var bluePerPx = blueDifference / maxPx;
+  document.querySelector("body").style.backgroundColor =
+    "rgb(" + start[0] + "," + start[1] + "," + start[2] + ")";
+
+  window.addEventListener("scroll", () => {
+    var scroll = window.scrollY;
+    if (scroll < 600) {
+      document.querySelector("body").style.backgroundColor =
+        "rgb(" +
+        (start[0] + redPerPx * scroll) +
+        "," +
+        (start[1] + greenPerPx * scroll) +
+        "," +
+        (start[2] + bluePerPx * scroll) +
+        ")";
+    } else {
+      document.querySelector("body").style.backgroundColor = "white";
+    }
+  });
+}
+
 window.addEventListener("resize", handleResize);

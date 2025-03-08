@@ -2,8 +2,8 @@
 <html lang="en">
 <head>
     <link rel="stylesheet" href="styles.css">
-    <link rel="stylesheet" href="assets/styles.css">
-    <link rel="icon" href="assets/icon_gray.ico" type="image/x-icon">
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" href="../assets/icon_gray.ico" type="image/x-icon">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta name="description" content='Lifelong learning is amazing! Imagine becoming happier, healthier, more confident, smarter, and more capable every single day of your life, lifelong learning makes it possible. And the great thing is that it is available to everyone. With the right resources, anyone can learn anything. Acquirable supports you on your journey of learning with articles about learning techniques, simple explanations, motivation, and insights from inspiring people.'>
@@ -15,15 +15,15 @@
     <div class="container">
         <div class="page-content">
             <div class="start-view">
-                <img src="assets/acqu_titleimg.png" alt="Raphael_School_of_Athens" class="title-line-img">
-                <h1 class="title-line">Everything is Acquirable.</h1>
-                <h2 class="title-call">Learn anything you want. Acquirable supports you on your journey.</h2>
-                <a href="#articles" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
-                    <span class="tag-link-text">Explore Articles</span>
+                <img src="light-bulb.png" alt="lightbulb" class="title-line-img lightbulb">
+                <h1 class="title-line"  style="text-shadow: none;">The Magic of Learning</h1>
+                <h2 class="title-call">Learning is form of magic available to everyone. Explore articles about its beautiful characteristics.</h2>
+                <a href="#articles" class="article-tag" style="border: 1px solid #000000;">
+                    <span class="tag-link-text"  style="color: black;">Explore Articles</span>
                 </a>
             </div>
             <div class="main-line" id="articles">
-                <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
+                <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
                 <div class="tag-filter">
                 </div>
                 <div class="article-container">
@@ -35,15 +35,17 @@
     <div class="footer">
     </div>
     <div class="loader">
-        <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
+        <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
         <h1 class="main-quote" >Everything is Acquirable.</h1>
     </div>
-    <script src="assets/general.js"></script>
-    <script src="assets/mainpage.js"></script>
+    <script src="../assets/general.js"></script>
+    <script src="../assets/mainpage.js"></script>
     <script>
         loadFooter();
         loadHeader();
-        setCategory(null);
+        setPageAnaId("theMagicOfLearningPage");
+        enlightenScreen([198,200,221]);
+        setCategory([0]);
         curateMainPageContent(category, null, 0);
         displayTagFilters();
     </script>

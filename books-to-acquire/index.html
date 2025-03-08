@@ -15,11 +15,11 @@
     <div class="container">
         <div class="page-content">
             <div class="start-view">
-                <img src="../assets/acqu_titleimg.png" alt="Raphael_School_of_Athens" class="title-line-img">
-                <h1 class="title-line">Books to Acquire</h1>
+                <img src="bookview.png" alt="Raphael_School_of_Athens" class="title-line-img">
+                <h1 class="title-line" style="text-shadow: none;">Books to Acquire</h1>
                 <h2 class="title-call">Reading is a fantastic way to learn new things. Aquirable presents you particularly interesting and useful books for your journey.</h2>
-                <a href="#articles" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
-                    <span class="tag-link-text">Explore Books</span>
+                <a href="#articles" class="article-tag" style="border: 1px solid #000000;">
+                    <span class="tag-link-text"  style="color: black;">Explore Books</span>
                 </a>
             </div>
             <div class="main-line" id="articles">
@@ -43,8 +43,9 @@
     <script>
         loadFooter();
         loadHeader();
-        anaClick("booksToAcquirePage");
-        setCategory(2);
+        setPageAnaId("booksToAcquirePage");
+        enlightenScreen([198,200,221]);
+        setCategory([2]);
         curateMainPageContent(category, null, 0);
         displayTagFilters();
     </script>

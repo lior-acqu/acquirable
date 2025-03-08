@@ -15,15 +15,15 @@
     <div class="container">
         <div class="page-content">
             <div class="start-view">
-                <img src="assets/acqu_titleimg.png" alt="Raphael_School_of_Athens" class="title-line-img">
-                <h1 class="title-line">Everything is Acquirable.</h1>
-                <h2 class="title-call">Learn anything you want. Acquirable supports you on your journey.</h2>
-                <a href="#articles" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;">
-                    <span class="tag-link-text">Explore Articles</span>
+                <img src="aristotle.png" alt="aristotle" class="title-line-img aristotle">
+                <h1 class="title-line" style="text-shadow: none;">Acquirable Topics</h1>
+                <h2 class="title-call">Complex topics can and should be explained in simple terms. Explore articles that take this statement seriously.</h2>
+                <a href="#articles" class="article-tag" style="border: 1px solid #000000;">
+                    <span class="tag-link-text" style="color: black;">Explore Articles</span>
                 </a>
             </div>
             <div class="main-line" id="articles">
-                <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
+                <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
                 <div class="tag-filter">
                 </div>
                 <div class="article-container">
@@ -35,16 +35,17 @@
     <div class="footer">
     </div>
     <div class="loader">
-        <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
+        <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
         <h1 class="main-quote" >Everything is Acquirable.</h1>
     </div>
-    <script src="assets/general.js"></script>
-    <script src="assets/mainpage.js"></script>
+    <script src="../assets/general.js"></script>
+    <script src="../assets/mainpage.js"></script>
     <script>
         loadFooter();
         loadHeader();
-        anaClick("acquirableTopicsPage");
-        setCategory(null);
+        setPageAnaId("acquirableTopicsPage");
+        enlightenScreen([198,200,221]);
+        setCategory([1]);
         curateMainPageContent(category, null, 0);
         displayTagFilters();
     </script>

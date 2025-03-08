@@ -81,6 +81,19 @@ body {
   margin-top: 100px;
   filter: brightness(1.1);
 }
+.aristotle {
+  height: 30vh;
+  width: auto;
+  max-width: 50vw;
+  transform: rotate(135deg) translateY(-5vh);
+  border-radius: 5px;
+}
+.lightbulb {
+  height: 30vh;
+  width: auto;
+  max-width: 50vw;
+  transform: rotate(7deg);
+}
 .title-line {
   font-family: "Playfair Dislplay", serif;
   font-weight: 700;
@@ -95,9 +108,9 @@ body {
 }
 .title-call {
   font-weight: 400;
-  font-size: 21px;
-  width: 60vw;
-  max-width: 600px;
+  font-size: 19px;
+  width: 52vw;
+  max-width: 520px;
   line-height: 1.7;
   text-align: center;
   margin-top: -45px;
@@ -685,7 +698,7 @@ li {
     margin-top: -60px;
   }
   .title-call {
-    font-size: 20px;
+    font-size: 18px;
     margin-top: -30px;
   }
 }
@@ -696,7 +709,7 @@ li {
     margin-top: -60px;
   }
   .title-call {
-    font-size: 20px;
+    font-size: 18px;
   }
   .article {
     width: 80vw;
@@ -721,7 +734,7 @@ li {
   }
   .title-call {
     margin-top: -25px;
-    font-size: 18px;
+    font-size: 17px;
   }
   .header-link-flex {
     display: none;
