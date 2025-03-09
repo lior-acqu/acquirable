@@ -12,7 +12,12 @@ if (!isset($_SESSION["csrf_token"])) {
     $_SESSION["csrf_token"] = bin2hex(random_bytes(32));
 }
 
-$trackingFile = "tracking.json";
+// Get current month and year
+$month = date("n");   // e.g., 3 for March
+$year = date("Y");    // e.g., 2025
+
+
+$trackingFile = "tracking_{$month}_{$year}.json";
 
 // Ensure the JSON file exists
 if (!file_exists($trackingFile)) {

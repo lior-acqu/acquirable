@@ -71,7 +71,7 @@ function dropDown() {
       menu.innerHTML +=
         '<a href="' +
         headerLinks[j].link +
-        '" class="header-link" anaid="headerLinkButton">' +
+        '" class="header-link" anaid="insignificantHeaderLinkButton">' +
         headerLinks[j].title +
         "</a>";
     }
@@ -91,13 +91,13 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="footerLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="footerLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="footerLinkButton">Privacy Policy</a><h2 class="footer-title">Content</h2>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="insignificantFooterLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="insignificantFooterLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="insignificantFooterLinkButton">Privacy Policy</a><h2 class="footer-title">Content</h2>';
 
   for (i = 0; i < headerLinks.length; i++) {
     footerContent +=
       '<a href="' +
       headerLinks[i].link +
-      '"  anaid="footerLinkButton">' +
+      '"  anaid="insignificantFooterLinkButton">' +
       headerLinks[i].title +
       "</a>";
   }
@@ -116,7 +116,7 @@ function loadHeader() {
     finalLink +=
       '<a href="' +
       headerLinks[i].link +
-      '" class="header-link" anaid="headerLinkButton">' +
+      '" class="header-link" anaid="insignificantHeaderLinkButton">' +
       headerLinks[i].title +
       "</a>";
   }
@@ -126,7 +126,7 @@ function loadHeader() {
     finalLink +=
       '<a href="' +
       headerLinks[j].link +
-      '" class="header-link" anaid="headerLinkButton">' +
+      '" class="header-link" anaid="insignificantHeaderLinkButton">' +
       headerLinks[j].title +
       "</a>";
   }
@@ -168,7 +168,7 @@ window.addEventListener("load", function () {
   document.querySelector(".loader").style.display = "none";
 
   // Fetch CSRF token from PHP
-  fetch("assets/analytics.php")
+  fetch("../../assets/analytics.php")
     .then((response) => response.json())
     .then((data) => {
       csrfToken = data.csrf_token;
@@ -180,7 +180,7 @@ window.addEventListener("load", function () {
   function anaClick(name) {
     if (!csrfToken) return;
 
-    fetch("assets/analytics.php", {
+    fetch("../../assets/analytics.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({
@@ -194,6 +194,15 @@ window.addEventListener("load", function () {
 
   // Attach event listeners to buttons and links
   document.querySelectorAll("a").forEach((element) => {
+    element.addEventListener("click", function () {
+      const anaName = this.attributes.anaid.nodeValue;
+      console.log(anaName);
+      if (anaName) {
+        anaClick(anaName);
+      }
+    });
+  });
+  document.querySelectorAll("button").forEach((element) => {
     element.addEventListener("click", function () {
       const anaName = this.attributes.anaid.nodeValue;
       console.log(anaName);

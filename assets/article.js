@@ -31,7 +31,7 @@ function findArticleData(id) {
 
 //function for sharing the article link
 function shareArticleLink(text, link) {
-  navigator.clipboard.writeText(text + ": " + link);
+  navigator.clipboard.writeText(text + " - " + link);
   // Show a confirmation message
   messageElement.style.visibility = "visible";
 
