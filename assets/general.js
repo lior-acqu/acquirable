@@ -60,6 +60,17 @@ const allArticles = [
     tags: [4],
     articleId: 0,
   },
+  {
+    title: "How to Improve Your Social Skills",
+    link: "https://www.acquirable.ch/acquirable-topics/improving-social-skills",
+    image:
+      "https://www.acquirable.ch/acquirable-topics/improving-social-skills/titleimg.jpg",
+    description:
+      "Your social skills determine the quality of your conversations, relationships and your connections. Here's how to improve them.",
+    category: [1],
+    tags: [0],
+    articleId: 1,
+  },
 ];
 
 //shows the dropdown
@@ -91,7 +102,7 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="insignificantFooterLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="insignificantFooterLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="insignificantFooterLinkButton">Privacy Policy</a><h2 class="footer-title">Content</h2>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="insignificantFooterLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="insignificantFooterLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="insignificantFooterLinkButton">Privacy Policy</a><a href="https://acquirable.ch/imprint" anaid="insignificantFooterLinkButton">Imprint</a><h2 class="footer-title">Content</h2>';
 
   for (i = 0; i < headerLinks.length; i++) {
     footerContent +=
