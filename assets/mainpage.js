@@ -92,18 +92,8 @@ function buildMainPost(array, page) {
     mainImg.src = mainImgSrc;
 
     //alternate between image and text being left or right if inner window width is big enough
-    if (window.innerWidth > 850) {
-      if (i % 2 == 0) {
-        mainPost.appendChild(mainImg);
-        mainPost.appendChild(postText);
-      } else {
-        mainPost.appendChild(postText);
-        mainPost.appendChild(mainImg);
-      }
-    } else {
-      mainPost.appendChild(mainImg);
-      mainPost.appendChild(postText);
-    }
+    mainPost.appendChild(mainImg);
+    mainPost.appendChild(postText);
 
     document.querySelector(".article-container").appendChild(mainPost);
 
@@ -196,20 +186,7 @@ function showDropdownFilters() {
   }
 }
 
-let ranFunction = false;
-
-// this checks if the screen is too small for the big display settings
-function handleResize() {
-  if (window.innerWidth <= 850 && ranFunction == false) {
-    // Call your function here
-    ranFunction = true;
-    curateMainPageContent(category, currentFilters, 0);
-  } else if (window.innerWidth > 850) {
-    //only if it is bigger again
-    ranFunction = false;
-    curateMainPageContent(category, currentFilters, 0);
-  }
-}
+function handleResize() {}
 
 // small parallax effect with title image
 const initialImageMargin = 0;

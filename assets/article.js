@@ -101,7 +101,7 @@ function buildSuggestions(array) {
   //check if there is an entry
   if (array.length == 0) {
     document.querySelector(".article-container").innerHTML =
-      "<img src='noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
+      "<img src='../../noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
   }
   for (let i = 0; i < array.length; i++) {
     //build the necessary HTML structure for every article

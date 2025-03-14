@@ -613,6 +613,10 @@ li {
   justify-content: space-between;
   color: black;
 }
+.main-post:nth-child(even),
+.main-post-article:nth-child(even) {
+  flex-direction: row-reverse;
+}
 .main-post-article {
   max-width: 1000px;
   border-bottom: 1px solid #e7e7e7;
@@ -768,6 +772,10 @@ li {
   .main-post {
     flex-direction: column;
     width: 80vw;
+  }
+  .main-post:nth-child(even),
+  .main-post-article:nth-child(even) {
+    flex-direction: column;
   }
   .main-img {
     border: none;

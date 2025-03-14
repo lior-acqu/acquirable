@@ -26,10 +26,10 @@ const headerLinks = [
       "Every complex topic can be explained simply without dumbing it down. To showcase this, I created <i>Acquirable Topics</i>, a library full of interesting articles about complex topics and ideas, presented in clear and simple terms.",
   },
   {
-    title: "Books to Acquire",
-    link: "https://www.acquirable.ch/books-to-acquire",
+    title: "Acquirable Book Club",
+    link: "https://www.acquirable.ch/book-club",
     description:
-      "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. On <i>Books to Acquire</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
+      "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. In the <i>Acquirable Book Club</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
   },
 ];
 //the tags (our topics)
@@ -114,7 +114,7 @@ function loadFooter() {
   }
 
   footerContent +=
-    '</div><div class="swiss-text">© 2025 Porath Media</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
+    '</div><div class="swiss-text">© 2025 Lior Porath</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
 
   var footer = document.querySelector(".footer");
   footer.innerHTML = footerContent;
