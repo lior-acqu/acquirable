@@ -50,14 +50,14 @@ const tags = [
 //the list of all artilces (please add new articles at the top)
 const allArticles = [
   {
-    title: "How to Master STEM Subjects by Memorisation",
-    link: "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation",
+    title: "How to Get the Most out of Writing Summaries",
+    link: "https://www.acquirable.ch/the-magic-of-learning/writing-summaries",
     image:
-      "https://www.acquirable.ch/the-magic-of-learning/mastering-stem-by-memorisation/title.jpg",
+      "https://www.acquirable.ch/the-magic-of-learning/writing-summaries/title.jpg",
     description:
-      "STEM subjects present a significant challenge for many students. Here's how to master them.",
+      "Writing summaries is one of the most popular and effective ways to learn something. Find out how to get the most out of them.",
     category: [0],
-    tags: [4],
+    tags: [],
     articleId: 0,
   },
   {
