@@ -51,7 +51,7 @@ function buildMainPost(array, page) {
   //check if there is an entry
   if (array.length == 0) {
     document.querySelector(".article-container").innerHTML =
-      "<img src='noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
+      "<img src='../../noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
   }
   for (let i = 0; i < array.length; i++) {
     //build the necessary HTML structure for every article
@@ -187,16 +187,6 @@ function showDropdownFilters() {
 }
 
 function handleResize() {}
-
-// small parallax effect with title image
-const initialImageMargin = 0;
-var newImageMargin = 0;
-window.addEventListener("scroll", () => {
-  var scroll = window.scrollY;
-  newImageMarginBottom = initialImageMargin + scroll / 5; // change intensity of parallax
-  document.querySelector(".title-line-img").style.marginBottom =
-    newImageMarginBottom + "px";
-});
 
 // make the screen transition from dark to light on scroll
 function enlightenScreen(startColor) {

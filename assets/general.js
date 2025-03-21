@@ -102,7 +102,7 @@ function closeDropDown() {
 //loads the footer on every screen
 function loadFooter() {
   var footerContent =
-    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="insignificantFooterLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="insignificantFooterLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="insignificantFooterLinkButton">Privacy Policy</a><a href="https://acquirable.ch/imprint" anaid="insignificantFooterLinkButton">Imprint</a><h2 class="footer-title">Content</h2>';
+    '<img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo"><div class="footer-links"><h2 class="footer-title">Company</h2><a href="https://acquirable.ch" anaid="insignificantFooterLinkButton">Home</a><a href="https://acquirable.ch/about" anaid="insignificantFooterLinkButton">About Acquirable</a><a href="https://acquirable.ch/privacy-policy" anaid="insignificantFooterLinkButton">Privacy Policy</a><a href="https://acquirable.ch/imprint" anaid="insignificantFooterLinkButton">Imprint</a><a href="https://acquirable.ch/affiliate-disclosure" anaid="insignificantFooterLinkButton">Affiliate Disclosure</a><h2 class="footer-title">Content</h2>';
 
   for (i = 0; i < headerLinks.length; i++) {
     footerContent +=
@@ -114,7 +114,7 @@ function loadFooter() {
   }
 
   footerContent +=
-    '</div><div class="swiss-text">© 2025 Lior Porath</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div>';
+    '</div><div class="swiss-text">© 2025 Lior Porath</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div><p class="footer-disclosure">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn advertising fees by linking to Amazon.com and affiliated websites.</p>';
 
   var footer = document.querySelector(".footer");
   footer.innerHTML = footerContent;

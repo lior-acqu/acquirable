@@ -15,14 +15,25 @@
     <div class="container">
         <div class="page-content">
             <div class="start-view">
-                <img src="aristotle.png" alt="aristotle" class="title-line-img aristotle">
-                <h1 class="title-line" style="text-shadow: none;">Acquirable Topics</h1>
-                <h2 class="title-call">Complex topics can and should be explained in simple terms. Explore articles that take this statement seriously.</h2>
-                <a href="#articles" anaid="goToArticlesAcquirableTopicsButton" class="article-tag" style="border: 1px solid #000000;">
-                    <span class="tag-link-text" style="color: black;">Explore Articles</span>
-                </a>
+                <div class="text-side">
+                    <div class="text-side-top">
+                        <h1 class="title-line"><span>Acquirable</span> Topics</h1>
+                    </div>
+                    <div class="text-side-bottom">
+                        <h2 class="title-call"><span>Complex</span> topics should be explained in <span>simple</span> terms. Explore articles that take this statement <span>seriously.</span></h2>
+                        <div class="title-line-flex">
+                            <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 200px;">
+                                <span class="tag-link-text">Explore Articles</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="acquirabletopics.jpg" alt="flower" class="title-line-img">
             </div>
             <div class="main-line" id="articles">
+                <p class="main-quote" style="max-width: 62%;">Created by Lior with a lot of passion</p>
+                <a target="_blank" href="https://www.instagram.com/notesbylior/">
+                <img src="books.png" alt="pfp" class="lior"></a>
                 <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
                 <div class="tag-filter">
                 </div>
@@ -44,7 +55,6 @@
         loadFooter();
         loadHeader();
         setPageAnaId("acquirableTopicsPage");
-        enlightenScreen([198,200,221]);
         setCategory([1]);
         curateMainPageContent(category, null, 0);
         displayTagFilters();

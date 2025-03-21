@@ -1,7 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <link rel="stylesheet" href="styles.css">
     <link rel="stylesheet" href="../assets/styles.css">
     <link rel="icon" href="../assets/icon_gray.ico" type="image/x-icon">
     <meta charset="UTF-8">
@@ -15,14 +14,25 @@
     <div class="container">
         <div class="page-content">
             <div class="start-view">
-                <img src="altclublogo.png" alt="Raphael_School_of_Athens" class="title-line-img" style="height: 15vh; width: auto; margin-top: 150px;">
-                <h1 class="title-line" style="color: rgb(0, 0, 0); text-shadow: none; margin-top: 0px;">Acquirable Book Club</h1>
-                <h2 class="title-call" style="color: rgb(0, 0, 0);">Welcome to the Acquirable Book Club! Reading is a fantastic way to learn new things. Explore interesting and useful books for your journey of learning.</h2>
-                <a href="#articles" anaid="goToArticlesBooksToAquireButton" class="article-tag" style="border: 1px solid #000000;">
-                    <span class="tag-link-text"  style="color: rgb(0, 0, 0);">Explore Books</span>
-                </a>
+                <div class="text-side">
+                    <div class="text-side-top">
+                        <h1 class="title-line"><span>Acquirable</span> Book Club</h1>
+                    </div>
+                    <div class="text-side-bottom">
+                        <h2 class="title-call"><span>Reading</span> is a fantastic way to learn new things. Explore <span>interesting</span> books curated <span>for you.</span></h2>
+                        <div class="title-line-flex">
+                            <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 200px;">
+                                <span class="tag-link-text">Explore Articles</span>
+                            </a>
+                        </div>
+                    </div>
+                </div>
+                <img src="books.png" alt="flower" class="title-line-img">
             </div>
             <div class="main-line" id="articles">
+                <p class="main-quote" style="max-width: 62%;">Created by Lior with a lot of passion</p>
+                <a target="_blank" href="https://www.instagram.com/notesbylior/">
+                <img src="books.png" alt="pfp" class="lior"></a>
                 <img src="altclublogo.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;">
                 <div class="tag-filter">
                 </div>
@@ -44,7 +54,6 @@
         loadFooter();
         loadHeader();
         setPageAnaId("booksToAcquirePage");
-        enlightenScreen([198,200,221]);
         setCategory([2]);
         curateMainPageContent(category, null, 0);
         displayTagFilters();
