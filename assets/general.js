@@ -47,8 +47,20 @@ const tags = [
   { name: "Tech & Science", image: "../../assets/natural-patterns/italy.jpg" },
   { name: "Business", image: "../../assets/natural-patterns/storm.jpg" },
 ];
-//the list of all artilces (please add new articles at the top)
+
+//the list of all articles (please add new articles at the top)
 const allArticles = [
+  {
+    title: "The Magic of Storytelling",
+    link: "https://www.acquirable.ch/acquirable-topics/storytelling",
+    image:
+      "https://www.acquirable.ch/acquirable-topics/storytelling/titleimg.jpg",
+    description:
+      "People love stories. Especially yours if you tell them in an engaging, authentic manner. Explore how that works in this article.",
+    category: [1],
+    tags: [0, 2],
+    articleId: 1,
+  },
   {
     title: "How to Get the Most out of Writing Summaries",
     link: "https://www.acquirable.ch/the-magic-of-learning/writing-summaries",
@@ -59,17 +71,6 @@ const allArticles = [
     category: [0],
     tags: [],
     articleId: 0,
-  },
-  {
-    title: "How to Improve Your Social Skills",
-    link: "https://www.acquirable.ch/acquirable-topics/improving-social-skills",
-    image:
-      "https://www.acquirable.ch/acquirable-topics/improving-social-skills/titleimg.jpg",
-    description:
-      "Your social skills determine the quality of your conversations, relationships and your connections. Here's how to improve them.",
-    category: [1],
-    tags: [0],
-    articleId: 1,
   },
 ];
 

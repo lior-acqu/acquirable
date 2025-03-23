@@ -749,6 +749,9 @@ li {
   width: 62%;
   margin-top: 30px;
 }
+.affiliate-note {
+  font-style: italic;
+}
 
 @media (max-height: 950px) {
   .start-view {

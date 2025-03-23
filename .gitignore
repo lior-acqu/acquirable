@@ -3,3 +3,5 @@ legallyok.html
 **/*.png
 **/*.svg
 **/*.env
+**/*.php
+**/*.json
