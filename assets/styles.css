@@ -128,7 +128,7 @@ body {
 .title-line span,
 .title-call span {
   font-style: italic;
-  font-family: "Playfair Dislplay", serif;
+  font-family: "Playfair Display", serif;
 }
 .title-call {
   font-weight: 400;
@@ -197,9 +197,7 @@ body {
   border: none;
   padding: 0;
   background-color: transparent;
-}
-.dropdown-tag:hover {
-  color: #515cd4;
+  color: black;
 }
 .selected {
   color: #515cd4;
@@ -400,7 +398,8 @@ body {
   display: flex;
   align-items: center;
   justify-content: center;
-  margin-right: 3px;
+  margin-right: 6px;
+  margin-bottom: 6px;
   padding: 0;
 }
 button {
@@ -712,6 +711,8 @@ li {
 .post-tags .article-tag {
   margin-left: 0px;
   margin-right: 6px;
+  margin-top: 0px;
+  margin-bottom: 6px;
 }
 .code-block {
   padding: 20px;
