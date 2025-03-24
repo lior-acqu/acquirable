@@ -370,7 +370,7 @@ body {
 .tag-filter {
   align-items: center;
   justify-content: space-between;
-  margin-top: 50px;
+  margin-top: 15px;
   margin-bottom: 10px;
   display: flex;
   width: calc(100% - 100px);
@@ -733,6 +733,17 @@ li {
   align-items: center;
   justify-content: flex-start;
   padding-right: 60px;
+  flex-wrap: wrap;
+}
+.title-line-flex .keyword-ipt {
+  width: 150px;
+  text-align: center;
+  font-size: 16px;
+  font-weight: 500;
+  color: #515cd4;
+}
+.title-line-flex .keyword-ipt::placeholder {
+  color: #515cd4aa;
 }
 .title-line-flex a {
   height: 34px;
@@ -753,6 +764,26 @@ li {
 }
 .affiliate-note {
   font-style: italic;
+}
+.keyword-search {
+  margin-top: 30px;
+  width: calc(100% - 100px);
+  border: none;
+  border-bottom: 1px #e7e7e7 solid;
+  padding: 10px 4px;
+}
+.keyword-ipt {
+  border: none;
+  font-size: 17px;
+  font-weight: 300;
+  padding: 0;
+}
+.keyword-ipt::placeholder {
+  color: #000000aa;
+}
+.keyword-ipt:focus {
+  outline: none;
+  border: none;
 }
 
 @media (max-height: 950px) {

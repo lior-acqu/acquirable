@@ -60,6 +60,7 @@ const allArticles = [
     category: [1],
     tags: [0, 2],
     articleId: 1,
+    keyword: "storytelling",
   },
   {
     title: "How to Get the Most out of Writing Summaries",
@@ -71,6 +72,7 @@ const allArticles = [
     category: [0],
     tags: [],
     articleId: 0,
+    keyword: "summaries",
   },
 ];
 

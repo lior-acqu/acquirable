@@ -44,6 +44,26 @@ function curateMainPageContent(category, filter, page) {
   //after the filtered array is created, buildMainPost() now displays all articles on screen
   buildMainPost(filteredArray, page);
 }
+
+//article search function
+function searchArticle(num) {
+  let keyword = "";
+  let articleArray = [];
+
+  keyword = document.getElementById("ipt").value;
+  keyword = keyword.toLowerCase();
+
+  for (let i = 0; i < allArticles.length; i++) {
+    if (allArticles[i].keyword.toLowerCase().includes(keyword)) {
+      articleArray.push(allArticles[i]);
+    }
+  }
+  if (articleArray.length == 0) {
+    articleArray = allArticles;
+  }
+  buildMainPost(articleArray, 0);
+}
+
 //displays the filtered articles
 function buildMainPost(array, page) {
   // empty everything except for what we need
