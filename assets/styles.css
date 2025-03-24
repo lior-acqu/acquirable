@@ -270,7 +270,7 @@ body {
   line-height: 2;
 }
 .graphic {
-  padding: 30px 0 10px 0;
+  padding: 30px 0 30px 0;
   display: flex;
   align-items: center;
   flex-direction: column;
@@ -284,6 +284,7 @@ body {
   font-weight: 300;
   font-size: 16px;
   margin-top: 25px;
+  margin-bottom: 0px;
 }
 .focus {
   margin-top: 50px;
