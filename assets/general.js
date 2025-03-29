@@ -51,6 +51,16 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: "Simon Sinek's Infinite Game",
+    link: "https://www.acquirable.ch/book-club/the-infinite-game",
+    image: "https://www.acquirable.ch/book-club/the-infinite-game/titleimg.png",
+    description: `Simon Sinek's Book "The Infinite Game" completely changed how I think about leadership and organsitations. Explore my total review here.`,
+    category: [2],
+    tags: [0, 1, 5],
+    articleId: 2,
+    keyword: "infinite game",
+  },
+  {
     title: "The Magic of Storytelling",
     link: "https://www.acquirable.ch/acquirable-topics/storytelling",
     image:

@@ -45,8 +45,18 @@ function curateMainPageContent(category, filter, page) {
   buildMainPost(filteredArray, page);
 }
 
+//scroll to articles
+function scrollToArticles() {
+  document.getElementById("articles").scrollIntoView();
+  document.querySelector(".search-container").style.display = "flex";
+  document.querySelector(".search-ipt").focus();
+}
+//closes search functionality
+function closeSearch() {
+  document.querySelector(".search-container").style.display = "none";
+}
 //article search function
-function searchArticle(num) {
+function searchArticle() {
   let keyword = "";
   let articleArray = [];
 

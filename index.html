@@ -24,9 +24,9 @@
                             <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;">
                                 <span class="tag-link-text">Explore Articles</span>
                             </a>
-                            <a href="#articles" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;">
-                                <span class="tag-link-text">Search Article</span>
-                            </a>
+                            <button onclick="scrollToArticles();" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;">
+                                <span class="tag-link-text" style="font-weight: 500;">Search Article</span>
+                            </button>
 
                         </div>
                     </div>
@@ -38,9 +38,9 @@
                 <a target="_blank" href="https://www.instagram.com/notesbylior/">
                 <img src="assets/createdbylior.jpg" alt="pfp" class="lior"></a>
                 <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;" id="articles">
-                <div class="keyword-search">
-                    <input type="text" id="ipt" class="keyword-ipt" placeholder="Search Article ..." oninput="searchArticle(1);">
-                </div>
+                <button onclick="scrollToArticles();" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px; margin: 10px 0 30px 0;">
+                    <span class="tag-link-text" style="font-weight: 500;">Search Article</span>
+                </button>
                 <div class="tag-filter">
                 </div>
                 <div class="article-container">
@@ -48,6 +48,10 @@
                 </div> 
             </div>
         </div>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-ipt" id="ipt" placeholder="Search" oninput="searchArticle();">
+        <button class="close-search" onclick="closeSearch()"><ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon></button>
     </div>
     <div class="footer">
     </div>
