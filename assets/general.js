@@ -51,6 +51,16 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: "How I Became a Notion Expert",
+    link: "https://www.acquirable.ch/acquirable-topics/notion",
+    image: "https://www.acquirable.ch/acquirable-topics/notion/titleimg.jpg",
+    description: `Notion is a fantastic tool. It offers you countless functions to take notes, organise your data and much more. Explore here how to master it.`,
+    category: [1],
+    tags: [4, 5],
+    articleId: 3,
+    keyword: "notion",
+  },
+  {
     title: "Simon Sinek's Infinite Game",
     link: "https://www.acquirable.ch/book-club/the-infinite-game",
     image: "https://www.acquirable.ch/book-club/the-infinite-game/titleimg.png",

@@ -641,8 +641,7 @@ li {
   justify-content: space-between;
   color: black;
 }
-.main-post:nth-child(even),
-.main-post-article:nth-child(even) {
+.main-post:nth-child(even) {
   flex-direction: row-reverse;
 }
 .main-post-article {

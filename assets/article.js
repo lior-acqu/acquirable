@@ -93,6 +93,10 @@ function curateSuggestions(filter, articleId) {
   } else {
     filteredArray = categorisedArray;
   }
+  // give the array a maximum length of 3
+  while (filteredArray.length > 3) {
+    filteredArray.pop();
+  }
   //after the filtered array is created, buildMainPost() now displays all articles on screen
   buildSuggestions(filteredArray);
 }
