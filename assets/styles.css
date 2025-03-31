@@ -153,6 +153,12 @@ body {
   margin-bottom: 5px;
   font-size: 32px;
 }
+.menu-icon {
+  height: 14px;
+}
+.menu-icon:hover {
+  opacity: 0.6;
+}
 .dropdown {
   font-size: 32px;
   display: none;
@@ -817,7 +823,7 @@ li {
 .search-ipt:focus {
   outline: none;
   border: #515cd4 1px solid;
-  background-color: #ffffff;
+  background-color: #ffffffaa;
 }
 .search-ipt::placeholder {
   color: #515cd4;
@@ -843,7 +849,7 @@ li {
   border: 0;
 }
 .close-search:hover {
-  background-color: white;
+  background-color: #ffffffaa;
 }
 @media (max-height: 950px) {
   .start-view {

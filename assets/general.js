@@ -110,7 +110,7 @@ function dropDown() {
         "</a>";
     }
     menu.innerHTML +=
-      '<ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon>';
+      '<img src="../../assets/x_black.png" class="menu-icon" style="margin-top: 10px;" onclick="closeDropDown();">';
     dropDownCounter++;
   } else {
     closeDropDown();
@@ -155,7 +155,7 @@ function loadHeader() {
       "</a>";
   }
   finalLink +=
-    '</div><div class="dropdown"><ion-icon onclick="dropDown();" name="reorder-three-outline"></ion-icon><div class="dropdown-list">';
+    '</div><div class="dropdown"><img src="../../assets/menu.png" class="menu-icon" onclick="dropDown();"><div class="dropdown-list">';
   for (j = 0; j < headerLinks.length; j++) {
     finalLink +=
       '<a href="' +
@@ -165,7 +165,7 @@ function loadHeader() {
       "</a>";
   }
   finalLink +=
-    '<ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon></div></div>';
+    '<img src="../../assets/menu.png" class="menu-icon"  onclick="closeDropDown();"></div></div>';
 
   var header = document.querySelector(".header");
   header.innerHTML = finalLink;

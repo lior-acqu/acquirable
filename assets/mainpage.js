@@ -47,7 +47,7 @@ function curateMainPageContent(category, filter, page) {
 
 //scroll to articles
 function scrollToArticles() {
-  document.getElementById("articles").scrollIntoView();
+  document.querySelector(".main-post").scrollIntoView();
   document.querySelector(".search-container").style.display = "flex";
   document.querySelector(".search-ipt").focus();
 }
@@ -192,7 +192,7 @@ function displayTagFilters() {
       "</button>";
   }
   tagFilter.innerHTML +=
-    '<div class="dropdown" style="padding-bottom: 10px;"><ion-icon onclick="showDropdownFilters();" name="reorder-three-outline"></ion-icon><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
+    '<div class="dropdown" style="padding-bottom: 10px;"><img src="assets/menu.png" class="menu-icon" onclick="showDropdownFilters();"><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
 }
 
 // if screen is too small, this shows the dropdown with the tag filters
@@ -209,7 +209,7 @@ function showDropdownFilters() {
         "</button>";
     }
     menu.innerHTML +=
-      '<ion-icon onclick="closeDropDown();" name="close-outline" class="dropdown-icon"></ion-icon>';
+      '<img src="../../assets/x_black.png" class="menu-icon" onclick="closeDropDown();">';
     dropDownCounter++;
   } else {
     closeDropDown();
