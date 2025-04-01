@@ -62,6 +62,7 @@ function searchArticle() {
 
   keyword = document.getElementById("ipt").value;
   keyword = keyword.toLowerCase();
+  document.querySelector(".main-post").scrollIntoView();
 
   for (let i = 0; i < allArticles.length; i++) {
     if (allArticles[i].keyword.toLowerCase().includes(keyword)) {
@@ -192,7 +193,7 @@ function displayTagFilters() {
       "</button>";
   }
   tagFilter.innerHTML +=
-    '<div class="dropdown" style="padding-bottom: 10px;"><img src="assets/menu.png" class="menu-icon" onclick="showDropdownFilters();"><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
+    '<div class="dropdown" style="padding-bottom: 10px;"><img src="../../assets/menu.png" class="menu-icon" onclick="showDropdownFilters();"><span style="font-size: 18px; font-weight: 400; margin-left: 10px">Filter Articles</span></div>';
 }
 
 // if screen is too small, this shows the dropdown with the tag filters
