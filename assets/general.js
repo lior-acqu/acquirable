@@ -198,6 +198,11 @@ function setPageAnaId(id) {
 
 //hides the loader
 window.addEventListener("load", function () {
+  // only changes header on the main pages where mainpage.js exists
+  try {
+    initialHeaderChange();
+  } catch {}
+
   var csrfToken = null;
   document.querySelector(".loader").style.display = "none";
 

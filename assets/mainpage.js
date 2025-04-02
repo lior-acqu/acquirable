@@ -65,7 +65,10 @@ function searchArticle() {
   document.querySelector(".main-post").scrollIntoView();
 
   for (let i = 0; i < allArticles.length; i++) {
-    if (allArticles[i].keyword.toLowerCase().includes(keyword)) {
+    if (
+      allArticles[i].keyword.toLowerCase().includes(keyword) ||
+      allArticles[i].title.toLowerCase().includes(keyword)
+    ) {
       articleArray.push(allArticles[i]);
     }
   }
@@ -217,6 +220,38 @@ function showDropdownFilters() {
   }
 }
 
+// makes the header solid and transparent
+function changeHeader() {
+  if (window.scrollY > 0) {
+    document.querySelector(".header").style.backgroundColor = "white";
+    document.querySelector(".header").style.borderBottom = "1px #e7e7e7 solid";
+    document.querySelector(".logo").src = "../../assets/Acquirable-white-1.png";
+    document.querySelector(".menu-icon").src = "../../assets/menu.png";
+    for (i = 0; i < headerLinks.length; i++) {
+      document.querySelectorAll(".header-link")[i].style.color = "black";
+    }
+  } else {
+    document.querySelector(".header").style.backgroundColor = "transparent";
+    document.querySelector(".header").style.borderBottom = "none";
+    document.querySelector(".logo").src = "../../assets/Acquirable-white.png";
+    document.querySelector(".menu-icon").src = "../../assets/menu_white.png";
+    for (i = 0; i < headerLinks.length; i++) {
+      document.querySelectorAll(".header-link")[i].style.color = "white";
+    }
+  }
+}
+
+function initialHeaderChange() {
+  // initially changes header
+  document.querySelector(".logo").src = "../../assets/Acquirable-white.png";
+  document.querySelector(".menu-icon").src = "../../assets/menu_white.png";
+  document.querySelector(".header").style.backgroundColor = "transparent";
+  document.querySelector(".header").style.borderBottom = "none";
+  for (i = 0; i < headerLinks.length; i++) {
+    document.querySelectorAll(".header-link")[i].style.color = "white";
+  }
+}
+
 function handleResize() {}
 
 // make the screen transition from dark to light on scroll
@@ -249,5 +284,7 @@ function enlightenScreen(startColor) {
     }
   });
 }
+
+window.addEventListener("scroll", changeHeader);
 
 window.addEventListener("resize", handleResize);
