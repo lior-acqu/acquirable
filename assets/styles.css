@@ -56,7 +56,7 @@ body {
 }
 .logo {
   height: 23px;
-  margin-top: 4px;
+  margin-top: 5px;
 }
 
 .footer {
@@ -553,6 +553,11 @@ li {
 }
 .footer-logo {
   width: 40px;
+  height: auto;
+}
+.club-logo {
+  width: 60%;
+  max-width: 400px;
   height: auto;
 }
 .footer-links {

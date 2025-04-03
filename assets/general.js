@@ -51,6 +51,27 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `Robert Cialdini's "Influence"`,
+    link: "https://www.acquirable.ch/book-club/influence",
+    image: "https://www.acquirable.ch/book-club/influence/Influence.png",
+    description: `“Influence” by psychologist Robert Cialdini is one of the most popular psychology books in the world and one of the best I've read. Read my extensive review here.`,
+    category: [2],
+    tags: [0, 5],
+    articleId: 5,
+    keyword: "influence",
+  },
+  {
+    title: `How to Learn Anything with the Feynman Technique`,
+    link: "https://www.acquirable.ch/the-magic-of-learning/feynman-technique",
+    image:
+      "https://www.acquirable.ch/the-magic-of-learning/feynman-technique/titleimg.jpg",
+    description: `The Feynman Technique is one of the most useful learning techniques to boost your understanding and knowledge of any topic. Explore here how it works.`,
+    category: [0],
+    tags: [],
+    articleId: 4,
+    keyword: "feynman technique",
+  },
+  {
     title: "How I Mastered Notion",
     link: "https://www.acquirable.ch/acquirable-topics/notion",
     image: "https://www.acquirable.ch/acquirable-topics/notion/titleimg.jpg",
@@ -61,7 +82,7 @@ const allArticles = [
     keyword: "notion",
   },
   {
-    title: "Simon Sinek's Infinite Game",
+    title: `Simon Sinek's "Infinite Game"`,
     link: "https://www.acquirable.ch/book-club/the-infinite-game",
     image: "https://www.acquirable.ch/book-club/the-infinite-game/titleimg.png",
     description: `Simon Sinek's Book "The Infinite Game" completely changed how I think about leadership and organsitations. Explore my total review here.`,
