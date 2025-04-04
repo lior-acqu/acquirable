@@ -51,7 +51,7 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
-    title: `Robert Cialdini's "Influence"`,
+    title: `Influence`,
     link: "https://www.acquirable.ch/book-club/influence",
     image: "https://www.acquirable.ch/book-club/influence/Influence.png",
     description: `“Influence” by psychologist Robert Cialdini is one of the most popular psychology books in the world and one of the best I've read. Read my extensive review here.`,
@@ -82,10 +82,10 @@ const allArticles = [
     keyword: "notion",
   },
   {
-    title: `Simon Sinek's "Infinite Game"`,
+    title: `The Infinite Game`,
     link: "https://www.acquirable.ch/book-club/the-infinite-game",
     image: "https://www.acquirable.ch/book-club/the-infinite-game/titleimg.png",
-    description: `Simon Sinek's Book "The Infinite Game" completely changed how I think about leadership and organsitations. Explore my total review here.`,
+    description: `Simon Sinek's book "The Infinite Game" completely changed how I think about leadership and organsitations. Explore my total review here.`,
     category: [2],
     tags: [0, 1, 5],
     articleId: 2,

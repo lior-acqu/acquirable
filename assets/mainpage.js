@@ -1,4 +1,5 @@
 var filterDropdownCounter = 0;
+document.getElementById("ipt").value = "";
 
 function setCategory(givenCategory) {
   category = givenCategory;
