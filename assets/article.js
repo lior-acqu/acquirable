@@ -31,14 +31,25 @@ function findArticleData(id) {
 
 //function for sharing the article link
 function shareArticleLink(text, link) {
-  navigator.clipboard.writeText(text + " - " + link);
-  // Show a confirmation message
-  messageElement.style.visibility = "visible";
+  //navigator.clipboard.writeText(text + " - " + link);
+  let shareData = {
+    title: "Acquirable",
+    text: text,
+    url: link,
+  };
+  try {
+    navigator.share(shareData);
+  } catch {
+    navigator.clipboard.writeText(text + " - " + link);
+    console.log("caught");
+    // Show a confirmation message
+    messageElement.style.visibility = "visible";
 
-  // Hide the message after 1 second (1000 milliseconds)
-  setTimeout(() => {
-    messageElement.style.visibility = "hidden";
-  }, 5000); // 1000ms = 1 second
+    // Hide the message after 3 seconds (1000 milliseconds)
+    setTimeout(() => {
+      messageElement.style.visibility = "hidden";
+    }, 2000); // 1000ms = 1 second
+  }
 }
 //removes the thank you message from the screen
 
