@@ -1,46 +1,36 @@
+var foundArticle = {};
+
 function findArticleData(id) {
-  var foundArticle = {};
+  articleId = id;
   for (let i = 0; i < allArticles.length; i++) {
     if (allArticles[i].articleId == id) {
+      foundArticle = allArticles[i];
       setCategoryAndTags(allArticles[i].category, allArticles[i].tags);
       curateSuggestions(null, id);
       document
         .getElementById("upperShare")
-        .setAttribute(
-          "onclick",
-          "shareArticleLink('Acquirable | " +
-            allArticles[i].title +
-            "','" +
-            allArticles[i].link +
-            "')"
-        );
+        .setAttribute("onclick", "shareArticleLink()");
       document
         .getElementById("lowerShare")
-        .setAttribute(
-          "onclick",
-          "shareArticleLink('Acquirable | " +
-            allArticles[i].title +
-            "','" +
-            allArticles[i].link +
-            "')"
-        );
+        .setAttribute("onclick", "shareArticleLink()");
       document.querySelector(".title").innerHTML = allArticles[i].title;
     }
   }
 }
 
 //function for sharing the article link
-function shareArticleLink(text, link) {
-  //navigator.clipboard.writeText(text + " - " + link);
+function shareArticleLink() {
+  var title = "Acquirable | " + foundArticle.title;
+  var link = foundArticle.link;
+
   let shareData = {
-    title: "Acquirable",
-    text: text,
+    title: title,
     url: link,
   };
   try {
     navigator.share(shareData);
   } catch {
-    navigator.clipboard.writeText(text + " - " + link);
+    navigator.clipboard.writeText(title + " - " + link);
     console.log("caught");
     // Show a confirmation message
     messageElement.style.visibility = "visible";
