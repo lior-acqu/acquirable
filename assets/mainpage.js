@@ -55,6 +55,7 @@ function scrollToArticles() {
 //closes search functionality
 function closeSearch() {
   document.querySelector(".search-container").style.display = "none";
+  document.getElementById("ipt").value = "";
 }
 //article search function
 function searchArticle() {
