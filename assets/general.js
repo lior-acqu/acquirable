@@ -51,6 +51,16 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `Why Every Great Learner Uses Active Learning`,
+    link: "https://www.acquirable.ch/the-magic-of-learning/active-learning",
+    image:
+      "https://www.acquirable.ch/the-magic-of-learning/active-learning/title.jpg",
+    description: `The terms "active learning" and "passive learning" are becoming increasingly popular. Explore why this hype is well-deserved.`,
+    category: [0],
+    tags: [],
+    articleId: 6,
+  },
+  {
     title: `Influence`,
     link: "https://www.acquirable.ch/book-club/influence",
     image: "https://www.acquirable.ch/book-club/influence/Influence.png",
