@@ -1,5 +1,4 @@
 var filterDropdownCounter = 0;
-document.getElementById("ipt").value = "";
 
 function setCategory(givenCategory) {
   category = givenCategory;
@@ -43,7 +42,11 @@ function curateMainPageContent(category, filter, page) {
     filteredArray = categorisedArray;
   }
   //after the filtered array is created, buildMainPost() now displays all articles on screen
-  buildMainPost(filteredArray, page);
+  if (category == 2) {
+    buildBook(filteredArray, page);
+  } else {
+    buildMainPost(filteredArray, page);
+  }
 }
 
 //scroll to articles
@@ -157,6 +160,55 @@ function buildMainPost(array, page) {
   }
 }
 
+function buildBook(array, page) {
+  // empty everything except for what we need
+  document.querySelector(".article-container").innerHTML = "";
+  //check if there is an entry
+  if (array.length == 0) {
+    document.querySelector(".article-container").innerHTML =
+      "<img src='../../noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
+  }
+  for (let i = 0; i < array.length; i++) {
+    //build the necessary HTML structure for every article
+    let mainTitleText = document.createTextNode(array[i].title);
+    let mainDescText = document.createTextNode(array[i].description);
+    let mainImgSrc = array[i].image;
+    let bookTitle = document.createElement("h1");
+    let mainDesc = document.createElement("h2");
+    let mainImg = document.createElement("img");
+    let bookContainer = document.createElement("div");
+    let artLink = array[i].link;
+    let affLink = array[i].affiliate;
+
+    bookTitle.classList.add("book-title");
+    mainDesc.classList.add("book-desc");
+    mainImg.classList.add("book-img");
+    bookContainer.classList.add("book-container");
+    titleLineFlex = `<a target="_blank" href="${affLink}" anaid="affiliateButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">Buy on Amazon</span></a><a target="_blank" href="${artLink}" anaid="bookArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">Read Article</span></a>`;
+
+    bookTitle.appendChild(mainTitleText);
+    mainDesc.appendChild(mainDescText);
+    mainImg.src = mainImgSrc;
+
+    //alternate between image and text being left or right if inner window width is big enough
+    bookContainer.appendChild(mainImg);
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(mainDesc);
+    bookContainer.innerHTML += titleLineFlex;
+
+    if (i % 2 == 0) {
+      let newBookFlex = document.createElement("div");
+      newBookFlex.classList.add("book-flex");
+      newBookFlex.appendChild(bookContainer);
+      document.querySelector(".article-container").appendChild(newBookFlex);
+    } else {
+      document
+        .querySelectorAll(".book-flex")
+        [Math.floor((i + 1) / 2) - 1].appendChild(bookContainer);
+    }
+  }
+}
+
 //adds or removes a tag filter
 function addFilter(number) {
   const DOMFilters = document.querySelector(".tag-filter");
@@ -207,12 +259,21 @@ function showDropdownFilters() {
     menu.style.display = "flex";
     menu.innerHTML = "";
     for (var i = 0; i < tags.length; i++) {
-      menu.innerHTML +=
-        '<button onclick="addFilter(' +
-        i +
-        ')" class="dropdown-tag" anaid="filterButton">' +
-        tags[i].name +
-        "</button>";
+      if (currentFilters.includes(i)) {
+        menu.innerHTML +=
+          '<button onclick="addFilter(' +
+          i +
+          ')" class="dropdown-tag selected" anaid="filterButton">' +
+          tags[i].name +
+          "</button>";
+      } else {
+        menu.innerHTML +=
+          '<button onclick="addFilter(' +
+          i +
+          ')" class="dropdown-tag" anaid="filterButton">' +
+          tags[i].name +
+          "</button>";
+      }
     }
     menu.innerHTML +=
       '<img src="../../assets/x_black.png" class="menu-icon" onclick="closeDropDown();">';

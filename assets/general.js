@@ -66,9 +66,10 @@ const allArticles = [
     image: "https://www.acquirable.ch/book-club/influence/Influence.png",
     description: `“Influence” by psychologist Robert Cialdini is one of the most popular psychology books in the world and one of the best I've read. Read my extensive review here.`,
     category: [2],
-    tags: [0, 5],
+    tags: [0, 4, 5],
     articleId: 5,
     keyword: "influence",
+    affiliate: "https://amzn.to/3RxdSSw",
   },
   {
     title: `How to Learn Anything with the Feynman Technique`,
@@ -100,6 +101,7 @@ const allArticles = [
     tags: [0, 1, 5],
     articleId: 2,
     keyword: "infinite game",
+    affiliate: "https://amzn.to/4caCWsb",
   },
   {
     title: "The Magic of Storytelling",

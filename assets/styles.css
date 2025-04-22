@@ -19,6 +19,7 @@ body {
   align-items: center;
   flex-direction: column;
   justify-content: center;
+  background-color: white;
 }
 .bg-img {
   position: absolute;
@@ -727,7 +728,7 @@ li {
   justify-content: center;
   flex-wrap: wrap;
   margin-top: 20px;
-  width: 80vw;
+  max-width: 80vw;
 }
 .lior {
   height: 300px;
@@ -817,6 +818,44 @@ li {
 h1 {
   letter-spacing: -3%;
 }
+
+.book-flex {
+  max-width: 1000px;
+  border-bottom: 1px solid #e7e7e7;
+  padding: 50px 0;
+  display: flex;
+  align-items: flex-start;
+  justify-content: space-between;
+  color: black;
+}
+.book-container {
+  width: 46%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+}
+.book-img {
+  height: 200px;
+  width: auto;
+}
+.book-title {
+  font-family: "Playfair Display", serif;
+  font-weight: 500;
+  font-style: italic;
+  font-size: 34px;
+  margin-top: 5px;
+  margin-bottom: 5px;
+  text-align: center;
+}
+.book-desc {
+  font-size: 18px;
+  font-family: "Inter", sans-serif;
+  font-weight: 400;
+  text-align: center;
+  margin-bottom: 30px;
+}
+
 @media (max-width: 1000px) {
   .article {
     width: 80vw;
@@ -855,13 +894,21 @@ h1 {
   .title {
     font-size: 48px;
   }
-  .main-post {
+  .main-post,
+  .book-flex {
     flex-direction: column;
     width: 80vw;
+    border: none;
   }
   .main-post:nth-child(even),
   .main-post-article:nth-child(even) {
     flex-direction: column;
+  }
+  .book-container {
+    width: 100%;
+    padding-bottom: 40px;
+    margin-bottom: 40px;
+    border-bottom: 1px #e7e7e7 solid;
   }
   .main-img {
     border: none;
