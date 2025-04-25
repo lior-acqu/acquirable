@@ -735,7 +735,22 @@ li {
   width: 200px;
   object-fit: cover;
   margin-top: 25px;
-  margin-bottom: 100px;
+  margin-bottom: 20px;
+}
+.newsletter-iframe {
+  margin: 20px 0 20px 0;
+  padding: 30px;
+  border-radius: 30px;
+  max-width: 80%;
+  overflow-y: hidden;
+}
+.newsletter-text {
+  font-size: 18px;
+  text-align: center;
+  font-weight: 400;
+  padding-top: 30px;
+  border-top: 1px solid #e7e7e7;
+  max-width: 62%;
 }
 .footer-disclosure {
   text-align: center;

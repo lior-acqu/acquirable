@@ -172,6 +172,7 @@ function buildBook(array, page) {
     //build the necessary HTML structure for every article
     let mainTitleText = document.createTextNode(array[i].title);
     let mainDescText = document.createTextNode(array[i].description);
+    let articleLink = document.createElement("a");
     let mainImgSrc = array[i].image;
     let bookTitle = document.createElement("h1");
     let mainDesc = document.createElement("h2");
@@ -184,14 +185,16 @@ function buildBook(array, page) {
     mainDesc.classList.add("book-desc");
     mainImg.classList.add("book-img");
     bookContainer.classList.add("book-container");
-    titleLineFlex = `<a target="_blank" href="${affLink}" anaid="affiliateButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">Buy on Amazon</span></a><a target="_blank" href="${artLink}" anaid="bookArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">Read Article</span></a>`;
+    titleLineFlex = `<a target="_blank" href="${affLink}" anaid="affiliateButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">View on Amazon</span></a><a href="${artLink}" anaid="bookArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px;"><span class="tag-link-text">Read Article</span></a>`;
 
     bookTitle.appendChild(mainTitleText);
     mainDesc.appendChild(mainDescText);
     mainImg.src = mainImgSrc;
+    articleLink.href = artLink;
+    articleLink.appendChild(mainImg);
 
     //alternate between image and text being left or right if inner window width is big enough
-    bookContainer.appendChild(mainImg);
+    bookContainer.appendChild(articleLink);
     bookContainer.appendChild(bookTitle);
     bookContainer.appendChild(mainDesc);
     bookContainer.innerHTML += titleLineFlex;
