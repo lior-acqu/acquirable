@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="../assets/styles.css">
+    <link rel="icon" href="../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content='Lifelong learning is amazing, fun and available to everyone! Acquirable supports you on your journey of learning with interesting articles.'>
+    <title>Notes By Lior | Overview</title>
+</head>
+<body style="justify-content: flex-end; min-height: 100vh; background-color: #F3F4FF;">
+    <img src="../assets/createdbyliorsmall.jpg" alt="Picture of Lior" class="pfp-small">
+        <h1 class="welcome-notice">Welcome, curious explorer!</h1>
+        <p class="welcome-text" style="color: black;">Here, you can explore all the content I make 😄</p>
+        <div class="page-container">
+            <div class="explorer-page">
+                <div class="exp-page-header">
+                    <h2 class="exp-page-title">My Newsletter</h2>
+                    <h2 class="exp-page-title">💌</h2>
+                </div>
+                <a class="exp-page-button" target="_blank" href="https://acquirablecuriosity.substack.com/">Subscribe to My Newsletter</a>
+                <p class="newsletter-note" style="color: #8b8b8b; max-width: none; width: 100%; text-align: justify; margin: 30px 0 0 0;">By clicking this link, you will get to a form where you can enter your email address. By doing so, you will be signed up to my free newsletter! 🥳 You can sign out and come back whenever you want 😊 Feel free to also read the <a href="https://acquirable.ch/privacy-policy">privacy policy</a>.</p>
+            </div>
+            <div class="explorer-page">
+                <div class="exp-page-header">
+                    <h2 class="exp-page-title">Directly Search Article</h2>
+                    <h2 class="exp-page-title">📚</h2>
+                </div>
+                <input oninput="quickSearch()" type="text" id="exp-ipt" placeholder="Search Article">
+                <div class="exp-articles"></div>
+            </div>
+            <div class="explorer-page">
+                <div class="exp-page-header">
+                    <h2 class="exp-page-title">Acquirable (My Blog)</h2>
+                    <h2 class="exp-page-title">🧠</h2>
+                </div>
+                <a class="exp-page-button" target="_blank" href="https://acuqirable.ch">Explore My Articles</a>
+            </div>
+            <div class="explorer-page">
+                <div class="exp-page-header">
+                    <h2 class="exp-page-title">My GitHub</h2>
+                    <h2 class="exp-page-title">👨‍💻</h2>
+                </div>
+                <a class="exp-page-button" target="_blank" href="https://github.com/lior-acqu">Explore My GitHub Projects</a>
+            </div>
+            <div class="explorer-page">
+                <div class="exp-page-header">
+                    <h2 class="exp-page-title">My Personal Page</h2>
+                    <h2 class="exp-page-title">🪄</h2>
+                </div>
+                <a class="exp-page-button" target="_blank" href="https://liorporath.ch">Visit My Personal Page</a>
+            </div>
+        </div>
+        <!--<div class="page-content">
+            <div class="start-view">
+                <h1 class="title-line" style="font-family: 'Playfair Display', serif;">Everything is <span>Acquirable.</span></h1>
+                <h2 class="title-call">Learn anything you want. Acquirable supports you on your journey.</h2>
+                <div class="title-line-flex">
+                    <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #ffffff; color:#ffffff; width: 170px;">
+                        <span class="tag-link-text" style="color: white;">Explore Articles</span>
+                    </a>
+                    <button onclick="scrollToArticles();" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #ffffff; color:#ffffff; width: 170px;">
+                        <span class="tag-link-text" style="font-weight: 500; color: white;">Search Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class="more-content">
+                <img src="./assets/newsletter_bg.png" alt="acquirablecuriosity-newsletter-features" class="newsletter-img">
+                <h1 class="newsletter-title">Get the most out of my content with my newsletter, Acquirable Curiosity.</h1>
+                <p class="newsletter-text">Join a community of lifelong learners and benefit from the best of my content.</p>
+                <a target="_blank" href="https://acquirablecuriosity.substack.com/" anaid="NewsletterButton" class="article-tag" style="border: 1px solid #ffffff;">
+                    <span class="tag-link-text" style="font-weight:500; color: white;">Subscribe to My Newsletter</span>
+                </a>
+                <p class="newsletter-note">By clicking this link, you will get to a form where you can enter your email address. By doing so, you will be signed up to my free newsletter! 🥳 You can sign out and come back whenever you want 😊 Feel free to also read Acquirable's <a href="https://acuqirable.ch/privacy-policy">privacy policy</a>.</p>
+            </div>
+            <div class="main-line">
+                <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;" id="articles">
+                <button onclick="scrollToArticles();" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4; width: 170px; margin: 10px 0 30px 0;">
+                    <span class="tag-link-text" style="font-weight: 500;">Search Article</span>
+                </button>
+                <div class="tag-filter">
+                </div>
+                <div class="article-container">
+
+                </div> 
+            </div>
+        </div>-->
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-ipt" id="ipt" placeholder="Search" oninput="searchArticle();">
+        <button class="close-search" onclick="closeSearch()"><img src="../assets/x_blue.png" class="menu-icon" onclick="closeDropDown();"></button>
+    </div>
+    <div class="loader">
+        <img src="../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../assets/general.js"></script>
+    <script src="../assets/mainpage.js"></script>
+    <script>
+        setPageAnaId("notesbyliorPage");
+        noHeader = true;
+    </script>
+</body>
+</html>

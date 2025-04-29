@@ -1,4 +1,5 @@
 var filterDropdownCounter = 0;
+var noHeader = false;
 
 function setCategory(givenCategory) {
   category = givenCategory;
@@ -81,6 +82,39 @@ function searchArticle() {
     articleArray = allArticles;
   }
   buildMainPost(articleArray, 0);
+}
+
+// small search function for notesbylior page
+function quickSearch() {
+  let keyword = "";
+  let articleArray = [];
+  document.querySelector(".exp-articles").innerHTML = "";
+
+  keyword = document.getElementById("exp-ipt").value;
+  keyword = keyword.toLowerCase();
+
+  for (let i = 0; i < allArticles.length; i++) {
+    if (
+      allArticles[i].keyword.toLowerCase().includes(keyword) ||
+      allArticles[i].title.toLowerCase().includes(keyword)
+    ) {
+      articleArray.push(allArticles[i]);
+    }
+  }
+  // in this case we want an empty article array
+  if (keyword.length == 0) articleArray = [];
+
+  console.log(articleArray);
+  for (let j = 0; j < articleArray.length; j++)
+    // max 5 suggestions
+    if (j < 5) {
+      document.querySelector(".exp-articles").innerHTML +=
+        "<a class='exp-article-link' target='_blank' href='" +
+        articleArray[j].link +
+        "'>📚 " +
+        articleArray[j].title +
+        "</a>";
+    }
 }
 
 //displays the filtered articles
@@ -288,21 +322,25 @@ function showDropdownFilters() {
 
 // makes the header solid and transparent
 function changeHeader() {
-  if (window.scrollY > 0) {
-    document.querySelector(".header").style.backgroundColor = "white";
-    document.querySelector(".header").style.borderBottom = "1px #e7e7e7 solid";
-    document.querySelector(".logo").src = "../../assets/Acquirable-white-1.png";
-    document.querySelector(".menu-icon").src = "../../assets/menu.png";
-    for (i = 0; i < headerLinks.length; i++) {
-      document.querySelectorAll(".header-link")[i].style.color = "black";
-    }
-  } else {
-    document.querySelector(".header").style.backgroundColor = "transparent";
-    document.querySelector(".header").style.borderBottom = "none";
-    document.querySelector(".logo").src = "../../assets/Acquirable-white.png";
-    document.querySelector(".menu-icon").src = "../../assets/menu_white.png";
-    for (i = 0; i < headerLinks.length; i++) {
-      document.querySelectorAll(".header-link")[i].style.color = "white";
+  if (noHeader == false) {
+    if (window.scrollY > 0) {
+      document.querySelector(".header").style.backgroundColor = "white";
+      document.querySelector(".header").style.borderBottom =
+        "1px #e7e7e7 solid";
+      document.querySelector(".logo").src =
+        "../../assets/Acquirable-white-1.png";
+      document.querySelector(".menu-icon").src = "../../assets/menu.png";
+      for (i = 0; i < headerLinks.length; i++) {
+        document.querySelectorAll(".header-link")[i].style.color = "black";
+      }
+    } else {
+      document.querySelector(".header").style.backgroundColor = "transparent";
+      document.querySelector(".header").style.borderBottom = "none";
+      document.querySelector(".logo").src = "../../assets/Acquirable-white.png";
+      document.querySelector(".menu-icon").src = "../../assets/menu_white.png";
+      for (i = 0; i < headerLinks.length; i++) {
+        document.querySelectorAll(".header-link")[i].style.color = "white";
+      }
     }
   }
 }

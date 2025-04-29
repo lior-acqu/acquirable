@@ -59,6 +59,7 @@ const allArticles = [
     category: [0],
     tags: [],
     articleId: 6,
+    keyword: "active learning",
   },
   {
     title: `Influence`,

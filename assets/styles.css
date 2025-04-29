@@ -92,6 +92,18 @@ body {
   width: 100vw;
   flex-direction: column;
 }
+.more-content {
+  background-color: #000221;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  left: 0;
+  width: 100vw;
+  margin-bottom: 100px;
+  margin-top: -80px;
+  padding: 100px 0;
+}
 .title-line-img {
   height: calc(70vh + 100px);
   max-height: 700px;
@@ -730,34 +742,48 @@ li {
   margin-top: 20px;
   max-width: 80vw;
 }
-.lior {
-  height: 300px;
-  width: 200px;
-  object-fit: cover;
-  margin-top: 25px;
-  margin-bottom: 20px;
-}
-.newsletter-iframe {
-  margin: 20px 0 20px 0;
-  padding: 30px;
-  border-radius: 30px;
-  max-width: 80%;
-  overflow-y: hidden;
+.newsletter-img {
+  width: 80%;
+  max-width: 750px;
+  height: auto;
+  margin-top: 50px;
 }
 .newsletter-text {
-  font-size: 18px;
+  font-size: 24px;
   text-align: center;
+  font-weight: 300;
+  width: 80%;
+  max-width: 700px;
+  color: white;
+  margin-top: 5px;
+}
+.newsletter-note {
+  color: #ffffff;
+  font-style: italic;
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 70px;
+  font-size: 15px;
+}
+.newsletter-title {
+  width: 80%;
+  max-width: 700px;
+  text-align: center;
+  margin-top: 50px;
   font-weight: 400;
-  padding-top: 30px;
-  border-top: 1px solid #e7e7e7;
-  max-width: 62%;
+  font-size: 40px;
+  margin-bottom: 15px;
+  color: white;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -5%;
 }
 .footer-disclosure {
   text-align: center;
   font-style: italic;
   font-size: 16px;
   width: 62%;
-  margin-top: 30px;
+  margin-top: 10px;
 }
 .affiliate-note {
   font-style: italic;
@@ -869,6 +895,81 @@ h1 {
   font-weight: 400;
   text-align: center;
   margin-bottom: 30px;
+}
+
+.pfp-small {
+  width: 25%;
+  max-width: 120px;
+  margin-top: 50px;
+  border-radius: 120px;
+}
+.welcome-notice {
+  text-align: center;
+  font-size: 48px;
+  font-weight: 400;
+  font-style: italic;
+  font-family: "Playfair Display", serif;
+  max-width: 80%;
+  letter-spacing: -5%;
+  margin-bottom: 20px;
+  line-height: 1.2;
+}
+.welcome-text {
+  margin-top: 0px;
+  font-size: 20px;
+  letter-spacing: -5%;
+  width: 80%;
+  text-align: center;
+}
+.page-container {
+  width: 100%;
+  max-width: 1000px;
+  margin-top: 180px;
+}
+.explorer-page {
+  width: 100%;
+  padding: 30px;
+  border-radius: 30px 30px 0 0;
+  border: 1px solid #e7e7e7;
+  padding-bottom: 200px;
+  margin-top: -150px;
+  background-color: white;
+}
+.exp-page-header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+.exp-page-title {
+  margin-top: 0;
+  font-weight: 500;
+  font-size: 32px;
+  font-family: "Playfair Display", serif;
+  letter-spacing: -5%;
+}
+.exp-page-button,
+#exp-ipt {
+  width: 100%;
+  max-width: 400px;
+  padding: 5px;
+  border-radius: 100px;
+  border: 1px solid #000000;
+  font-size: 16px;
+  background-color: white;
+  color: #000000;
+  display: block;
+  text-align: center;
+}
+#exp-ipt {
+  margin-bottom: 30px;
+}
+#exp-ipt:focus {
+  outline: none;
+}
+.exp-article-link {
+  display: block;
+  margin-top: 15px;
+  font-size: 17px;
 }
 
 @media (max-width: 1000px) {
@@ -1006,5 +1107,14 @@ h1 {
   }
   .title-call {
     font-size: 18px;
+  }
+  .newsletter-title {
+    font-size: 32px;
+  }
+  .newsletter-text {
+    font-size: 20px;
+  }
+  .exp-page-title {
+    font-size: 28px;
   }
 }
