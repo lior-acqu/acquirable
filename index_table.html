@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content='Lifelong learning is amazing, fun and available to everyone! Acquirable supports you on your journey of learning with interesting articles.'>
+    <title>Acquirable | Home</title>
+</head>
+<body>
+    <img src="flowers.jpg" alt="bg-img" class="bg-img">
+    <div class="header">
+    </div>
+    <div class="container">
+        <div class="page-content">
+            <div class="start-view">
+                <h1 class="title-line" style="font-family: 'Playfair Display', serif;">Everything is <span>Acquirable.</span></h1>
+                <h2 class="title-call">Learn anything you want. Acquirable supports you on your journey.</h2>
+                <div class="title-line-flex">
+                    <a href="#articles" anaid="goToArticlesMainPageButton" class="article-tag" style="border: 1px solid #ffffff; color:#ffffff; width: 170px;">
+                        <span class="tag-link-text" style="color: white;">Explore Articles</span>
+                    </a>
+                    <button onclick="scrollToArticles();" anaid="searchArticleButton" class="article-tag" style="border: 1px solid #ffffff; color:#ffffff; width: 170px;">
+                        <span class="tag-link-text" style="font-weight: 500; color: white;">Search Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class="more-content">
+                <img src="./assets/newsletter_bg.png" alt="acquirablecuriosity-newsletter-features" class="newsletter-img">
+                <h1 class="newsletter-title">Get the most out of my content with my newsletter, Acquirable Curiosity.</h1>
+                <p class="newsletter-text">Join a community of lifelong learners and benefit from the best of my content.</p>
+                <a target="_blank" href="https://acquirablecuriosity.substack.com/" anaid="NewsletterButton" class="article-tag" style="border: 1px solid #ffffff;">
+                    <span class="tag-link-text" style="font-weight:500; color: white;">Subscribe to My Newsletter</span>
+                </a>
+                <p class="newsletter-note">By clicking this link, you will get to a form where you can enter your email address. By doing so, you will be signed up to my free newsletter! 🥳 You can sign out and come back whenever you want 😊 Feel free to also read Acquirable's <a href="https://acuqirable.ch/privacy-policy">privacy policy</a>.</p>
+            </div>
+            <div class="main-line">
+                <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;" id="articles">
+                <div class="tag-filter">
+                </div>
+                <table class="article-table">
+                    <tr>
+                        <td>
+                            <img class="table-img" src="https://www.acquirable.ch/the-magic-of-learning/active-learning/title.jpg">
+                        </td>
+                        <td class="dissapears-when-small">
+                            <div class="post-text"><h1 class="main-title">Why Every Great Learner Uses Active Learning</h1><h2 class="main-desc">The terms "active learning" and "passive learning" are becoming increasingly popular. Explore why this hype is well-deserved.</h2><p class="article-data">The Magic of Learning</p><div class="post-tags"></div></div>
+                        </td>
+                    </tr>
+                </table>
+                <div class="article-container">
+
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-ipt" id="ipt" placeholder="Search" oninput="searchArticle();">
+        <button class="close-search" onclick="closeSearch()"><img src="assets/x_blue.png" class="menu-icon" onclick="closeDropDown();"></button>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="assets/general.js"></script>
+    <script src="assets/mainpage.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setPageAnaId("mainPage");
+        setCategory(null);
+        curateMainPageContent(category, null, 0);
+        displayTagFilters();
+    </script>
+</body>
+</html>

@@ -51,6 +51,18 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `The 7 Habits of Highly Effective People`,
+    link: "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people",
+    image:
+      "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people/T7HoHEP.png",
+    description: `"The 7 Habits of Highly Effective People" is a highly valuable book showing us ways to sustainably become the person you want to be. Find out how in this article.`,
+    category: [2],
+    tags: [1, 5],
+    articleId: 7,
+    keyword: "seven habits",
+    affiliate: "https://amzn.to/3YmRMpM",
+  },
+  {
     title: `Why Every Great Learner Uses Active Learning`,
     link: "https://www.acquirable.ch/the-magic-of-learning/active-learning",
     image:
