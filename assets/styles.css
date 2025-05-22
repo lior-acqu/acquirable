@@ -8,7 +8,7 @@
   font-feature-settings: "liga" 1, "clig" 1;
   font-variant-ligatures: common-ligatures discretionary-ligatures;
   box-sizing: border-box;
-  letter-spacing: -1.5%;
+  letter-spacing: -3.5%;
 }
 body {
   padding: 0;
@@ -93,7 +93,7 @@ body {
   flex-direction: column;
 }
 .more-content {
-  background-color: #000221;
+  background-color: #1b1b2e;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -143,6 +143,7 @@ body {
   font-family: "Playfair Dislplay", serif;
   font-weight: 400;
   font-size: 110px;
+  font-style: italic;
   width: 62vw;
   max-width: 800px;
   line-height: 1.1;
@@ -157,11 +158,11 @@ body {
   font-family: "Playfair Display", serif;
 }
 .title-call {
-  font-weight: 300;
-  font-size: 26px;
+  font-weight: 400;
+  font-size: 32px;
   width: 62vw;
-  max-width: 520px;
-  line-height: 1;
+  max-width: 600px;
+  line-height: 1.2;
   text-align: center;
   color: white;
   margin-top: 30px;
@@ -209,6 +210,11 @@ body {
   padding: 30px;
   height: 100vh;
   overflow: hidden;
+}
+.dropdown-f-container {
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 .dropdown-icon {
   font-size: 32px;
@@ -264,6 +270,7 @@ body {
   font-weight: 700;
   font-style: italic;
   text-align: center;
+  margin-bottom: 30px;
 }
 .auth {
   height: 80px;
@@ -379,7 +386,9 @@ body {
 .article-type {
   margin-bottom: 20px;
   text-align: center;
-  color: #515cd4;
+  color: #000000;
+  font-size: 18px;
+  font-weight: 400;
 }
 .article-tags {
   display: flex;
@@ -411,20 +420,25 @@ body {
 }
 .tag-filter {
   align-items: center;
-  justify-content: space-between;
-  margin-top: 15px;
+  justify-content: center;
+  margin-top: 25px;
   margin-bottom: 10px;
+  padding: 0px 0px 20px 0px;
   display: flex;
   width: calc(100% - 100px);
   border-bottom: 1px solid #e7e7e7;
+  flex-wrap: wrap;
 }
 .filter-tag {
   font-family: "Inter", sans-serif;
-  font-weight: 300;
-  font-size: 17px;
+  font-weight: 500;
+  font-size: 16px;
   background-color: transparent;
   border: none;
-  padding-bottom: 10px;
+  margin: 5px 3px;
+  padding: 5px 15px;
+  border: 1px #d8d8d8 solid;
+  border-radius: 30px;
 }
 .filter-button {
   font-size: 24px;
@@ -434,14 +448,14 @@ body {
 }
 .article-tag {
   background-color: transparent;
-  border: 1px black solid;
   border-radius: 100px;
-  height: 34px;
+  height: 32px;
   display: flex;
   align-items: center;
   justify-content: center;
   margin: 3px;
   padding: 0;
+  border: 1px #d8d8d8 solid;
 }
 button {
   cursor: pointer;
@@ -456,8 +470,9 @@ button {
 .tag-text {
   font-size: 16px;
   font-family: "Inter", sans-serif;
-  margin: 0 15px 0 10px;
-  font-weight: 400;
+  margin: 0 15px 0 15px;
+  font-weight: 500;
+  letter-spacing: -3%;
 }
 .tag-link-text {
   color: #515cd4;
@@ -465,12 +480,11 @@ button {
   font-size: 16px;
 }
 .clicked-tag {
-  font-weight: 400;
-  border-bottom: 1px black solid;
+  font-weight: 800;
 }
 .type-link {
   font-size: 18px;
-  font-weight: 500;
+  font-weight: 600;
   text-align: center;
   display: inline;
 }
@@ -718,7 +732,7 @@ li {
   flex-wrap: wrap;
 }
 .post-tags .article-tag {
-  margin: 3px;
+  margin: 3px 6px 3px 0px;
 }
 .code-block {
   padding: 20px;
@@ -739,7 +753,7 @@ li {
   align-items: center;
   justify-content: center;
   flex-wrap: wrap;
-  margin-top: 20px;
+  margin-top: 0px;
   max-width: 80vw;
 }
 .newsletter-img {
@@ -749,7 +763,7 @@ li {
   margin-top: 50px;
 }
 .newsletter-text {
-  font-size: 24px;
+  font-size: 22px;
   text-align: center;
   font-weight: 300;
   width: 80%;
@@ -763,7 +777,7 @@ li {
   width: 80%;
   max-width: 700px;
   text-align: center;
-  margin-top: 70px;
+  margin-top: 30px;
   font-size: 15px;
 }
 .newsletter-title {
@@ -771,11 +785,10 @@ li {
   max-width: 700px;
   text-align: center;
   margin-top: 50px;
-  font-weight: 400;
+  font-weight: 600;
   font-size: 40px;
   margin-bottom: 15px;
   color: white;
-  font-family: "Playfair Display", serif;
   letter-spacing: -5%;
 }
 .footer-disclosure {
@@ -783,7 +796,7 @@ li {
   font-style: italic;
   font-size: 16px;
   width: 62%;
-  margin-top: 10px;
+  margin-top: 30px;
 }
 .affiliate-note {
   font-style: italic;
@@ -855,10 +868,6 @@ li {
 .close-search:hover {
   background-color: #ffffffaa;
 }
-.sub-title,
-h1 {
-  letter-spacing: -3%;
-}
 
 .book-flex {
   max-width: 1000px;
@@ -879,6 +888,7 @@ h1 {
 .book-img {
   height: 200px;
   width: auto;
+  margin-bottom: 10px;
 }
 .book-title {
   font-family: "Playfair Display", serif;
@@ -946,6 +956,15 @@ h1 {
   font-size: 32px;
   font-family: "Playfair Display", serif;
   letter-spacing: -5%;
+}
+.post-box {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.instagram-media {
+  min-width: 250px !important;
 }
 .exp-page-button,
 #exp-ipt {

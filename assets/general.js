@@ -14,14 +14,14 @@ var pageAnaId = null;
 //the categories
 const headerLinks = [
   {
-    title: "The Magic of Learning",
-    link: "https://www.acquirable.ch/the-magic-of-learning",
+    title: "Articles",
+    link: "https://www.acquirable.ch/articles",
     description:
       "Lifelong learning is fantastic! On <i>The Magic of Learning</i>, you find fascinating articles about learning advice, methods, tools, techniques and many other inspiring ideas.",
   },
   {
-    title: "Acquirable Topics",
-    link: "https://www.acquirable.ch/acquirable-topics",
+    title: "Projects",
+    link: "https://www.acquirable.ch/projects",
     description:
       "Every complex topic can be explained simply without dumbing it down. To showcase this, I created <i>Acquirable Topics</i>, a library full of interesting articles about complex topics and ideas, presented in clear and simple terms.",
   },
@@ -36,49 +36,68 @@ const headerLinks = [
 const tags = [
   {
     name: "Psychology",
-    image: "../../assets/natural-patterns/flower-meadow.jpg",
+    color: "white",
   },
-  { name: "Philosophy", image: "../../assets/natural-patterns/grass.jpg" },
+  { name: "Philosophy", color: "white" },
   {
     name: "Languages & Literature",
-    image: "../../assets/natural-patterns/manyships.jpg",
+    color: "white",
   },
-  { name: "Art & Design", image: "../../assets/natural-patterns/sky1.jpg" },
-  { name: "Tech & Science", image: "../../assets/natural-patterns/italy.jpg" },
-  { name: "Business", image: "../../assets/natural-patterns/storm.jpg" },
+  { name: "Art & Design", color: "white" },
+  { name: "Tech & Science", color: "white" },
+  { name: "Business", color: "white" },
+  { name: "Study Methods", color: "white" },
+  {
+    name: "Benefits of Learning",
+    color: "white",
+  },
+  {
+    name: "Productivity & Habits",
+    color: "white",
+  },
 ];
 
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `Medieval Reasons Why “Hustle Culture” Is Pointless`,
+    link: "https://www.acquirable.ch/articles/medieval-reason-8",
+    image: "https://www.acquirable.ch/articles/medieval-reason-8/title.jpg",
+    description: `What the progress we’ve made in the world of food production tells us about healthy productivity in our modern lives.`,
+    category: [0],
+    tags: [0, 4, 8],
+    articleId: 8,
+    keyword: "medieval-reason",
+    affiliate: "",
+  },
+  {
     title: `The 7 Habits of Highly Effective People`,
-    link: "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people",
+    link: "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people-7",
     image:
-      "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people/T7HoHEP.png",
+      "https://www.acquirable.ch/book-club/the-seven-habits-of-highly-effective-people-7/T7HoHEP.png",
     description: `"The 7 Habits of Highly Effective People" is a highly valuable book showing us ways to sustainably become the person you want to be. Find out how in this article.`,
-    category: [2],
-    tags: [1, 5],
+    category: [0, 2],
+    tags: [1, 5, 8],
     articleId: 7,
     keyword: "seven habits",
     affiliate: "https://amzn.to/3YmRMpM",
   },
   {
     title: `Why Every Great Learner Uses Active Learning`,
-    link: "https://www.acquirable.ch/the-magic-of-learning/active-learning",
-    image:
-      "https://www.acquirable.ch/the-magic-of-learning/active-learning/title.jpg",
+    link: "https://www.acquirable.ch/articles/active-learning-6",
+    image: "https://www.acquirable.ch/articles/active-learning-6/title.jpg",
     description: `The terms "active learning" and "passive learning" are becoming increasingly popular. Explore why this hype is well-deserved.`,
     category: [0],
-    tags: [],
+    tags: [6],
     articleId: 6,
     keyword: "active learning",
   },
   {
     title: `Influence`,
-    link: "https://www.acquirable.ch/book-club/influence",
-    image: "https://www.acquirable.ch/book-club/influence/Influence.png",
+    link: "https://www.acquirable.ch/book-club/influence-5",
+    image: "https://www.acquirable.ch/book-club/influence-5/Influence.png",
     description: `“Influence” by psychologist Robert Cialdini is one of the most popular psychology books in the world and one of the best I've read. Read my extensive review here.`,
-    category: [2],
+    category: [0, 2],
     tags: [0, 4, 5],
     articleId: 5,
     keyword: "influence",
@@ -86,31 +105,32 @@ const allArticles = [
   },
   {
     title: `How to Learn Anything with the Feynman Technique`,
-    link: "https://www.acquirable.ch/the-magic-of-learning/feynman-technique",
+    link: "https://www.acquirable.ch/articles/feynman-technique-4",
     image:
-      "https://www.acquirable.ch/the-magic-of-learning/feynman-technique/titleimg.jpg",
+      "https://www.acquirable.ch/articles/feynman-technique-4/titleimg.jpg",
     description: `The Feynman Technique is one of the most useful learning techniques to boost your understanding and knowledge of any topic. Explore here how it works.`,
     category: [0],
-    tags: [],
+    tags: [6],
     articleId: 4,
     keyword: "feynman technique",
   },
   {
     title: "How I Mastered Notion",
-    link: "https://www.acquirable.ch/acquirable-topics/notion",
-    image: "https://www.acquirable.ch/acquirable-topics/notion/titleimg.jpg",
+    link: "https://www.acquirable.ch/articles/notion-3",
+    image: "https://www.acquirable.ch/articles/notion-3/titleimg.jpg",
     description: `Notion is a fantastic tool. It offers you countless functions to take notes, organise your data and much more. Explore here how to master it.`,
-    category: [1],
-    tags: [4, 5],
+    category: [0],
+    tags: [4, 8],
     articleId: 3,
     keyword: "notion",
   },
   {
     title: `The Infinite Game`,
-    link: "https://www.acquirable.ch/book-club/the-infinite-game",
-    image: "https://www.acquirable.ch/book-club/the-infinite-game/titleimg.png",
+    link: "https://www.acquirable.ch/book-club/the-infinite-game-2",
+    image:
+      "https://www.acquirable.ch/book-club/the-infinite-game-2/titleimg.png",
     description: `Simon Sinek's book "The Infinite Game" completely changed how I think about leadership and organsitations. Explore my total review here.`,
-    category: [2],
+    category: [0, 2],
     tags: [0, 1, 5],
     articleId: 2,
     keyword: "infinite game",
@@ -118,25 +138,23 @@ const allArticles = [
   },
   {
     title: "The Magic of Storytelling",
-    link: "https://www.acquirable.ch/acquirable-topics/storytelling",
-    image:
-      "https://www.acquirable.ch/acquirable-topics/storytelling/titleimg.jpg",
+    link: "https://www.acquirable.ch/articles/storytelling-1",
+    image: "https://www.acquirable.ch/articles/storytelling-1/titleimg.jpg",
     description:
       "People love stories. Especially yours if you tell them in an engaging, authentic manner. Explore how that works in this article.",
-    category: [1],
+    category: [0],
     tags: [0, 2],
     articleId: 1,
     keyword: "storytelling",
   },
   {
     title: "How to Get the Most out of Writing Summaries",
-    link: "https://www.acquirable.ch/the-magic-of-learning/writing-summaries",
-    image:
-      "https://www.acquirable.ch/the-magic-of-learning/writing-summaries/title.jpg",
+    link: "https://www.acquirable.ch/articles/writing-summaries-0",
+    image: "https://www.acquirable.ch/articles/writing-summaries-0/title.jpg",
     description:
       "Writing summaries is one of the most popular and effective ways to learn something. Find out how to get the most out of them.",
     category: [0],
-    tags: [],
+    tags: [6],
     articleId: 0,
     keyword: "summaries",
   },
@@ -183,7 +201,7 @@ function loadFooter() {
   }
 
   footerContent +=
-    '</div><div class="swiss-text">© 2025 Lior Porath</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland" class="swiss-image"></div><p class="footer-disclosure">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn advertising fees by linking to Amazon.com and affiliated websites.</p>';
+    '</div><div class="swiss-text">© 2025 Lior Porath</div><div class="swiss-flex"><div class="swiss-text">Created in Switzerland</div><img src="../../assets/schweiz.png" alt="switzerland flag" class="swiss-image"></div><p class="footer-disclosure">We are a participant in the Amazon Services LLC Associates Program, an affiliate advertising program designed to provide a means for us to earn advertising fees by linking to Amazon.com and affiliated websites.</p>';
 
   var footer = document.querySelector(".footer");
   footer.innerHTML = footerContent;

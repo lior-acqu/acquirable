@@ -52,7 +52,7 @@ function curateMainPageContent(category, filter, page) {
 
 //scroll to articles
 function scrollToArticles() {
-  document.querySelector(".main-post").scrollIntoView();
+  document.querySelector(".main-line").scrollIntoView();
   document.querySelector(".search-container").style.display = "flex";
   document.querySelector(".search-ipt").focus();
 }
@@ -68,7 +68,7 @@ function searchArticle() {
 
   keyword = document.getElementById("ipt").value;
   keyword = keyword.toLowerCase();
-  document.querySelector(".main-post").scrollIntoView();
+  document.querySelector(".main-line").scrollIntoView();
 
   for (let i = 0; i < allArticles.length; i++) {
     if (
@@ -134,7 +134,9 @@ function buildMainPost(array, page) {
     for (let j = 0; j < array[i].category.length; j++) {
       articleDataArray.push(headerLinks[array[i].category[j]].title);
     }
-    let articleDataText = document.createTextNode(articleDataArray.join(", "));
+    let articleDataText = document.createTextNode(
+      "Featured in " + articleDataArray.join(" and ")
+    );
     let mainImgSrc = array[i].image;
     let mainTitle = document.createElement("h1");
     let mainDesc = document.createElement("h2");
@@ -172,21 +174,16 @@ function buildMainPost(array, page) {
 
     //create the tags
     for (let j = 0; j < array[i].tags.length; j++) {
-      let imageLink = tags[array[i].tags[j]].image;
       let text = document.createTextNode(tags[array[i].tags[j]].name);
 
-      let tagImage = document.createElement("img");
       let tagText = document.createElement("span");
       let tag = document.createElement("div");
 
-      tagImage.classList.add("tag-image");
       tagText.classList.add("tag-text");
       tag.classList.add("article-tag");
+      tag.style.backgroundColor = tags[array[i].tags[j]].color;
 
-      tagImage.src = imageLink;
       tagText.appendChild(text);
-
-      tag.appendChild(tagImage);
       tag.appendChild(tagText);
 
       document.querySelectorAll(".post-tags")[i].appendChild(tag);
@@ -229,8 +226,6 @@ function buildBook(array, page) {
 
     //alternate between image and text being left or right if inner window width is big enough
     bookContainer.appendChild(articleLink);
-    bookContainer.appendChild(bookTitle);
-    bookContainer.appendChild(mainDesc);
     bookContainer.innerHTML += titleLineFlex;
 
     if (i % 2 == 0) {
@@ -243,6 +238,8 @@ function buildBook(array, page) {
         .querySelectorAll(".book-flex")
         [Math.floor((i + 1) / 2) - 1].appendChild(bookContainer);
     }
+    bookContainer.appendChild(bookTitle);
+    bookContainer.appendChild(mainDesc);
   }
 }
 
@@ -280,7 +277,9 @@ function addFilter(number) {
 function displayTagFilters() {
   for (var i = 0; i < tags.length; i++) {
     tagFilter.innerHTML +=
-      '<button onclick="addFilter(' +
+      '<button style="background-color:' +
+      tags[i].color +
+      '" onclick="addFilter(' +
       i +
       ')" class="filter-tag" anaid="filterButton">' +
       tags[i].name +

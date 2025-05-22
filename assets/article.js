@@ -116,7 +116,9 @@ function buildSuggestions(array) {
     for (let j = 0; j < array[i].category.length; j++) {
       articleDataArray.push(headerLinks[array[i].category[j]].title);
     }
-    let articleDataText = document.createTextNode(articleDataArray.join(", "));
+    let articleDataText = document.createTextNode(
+      "Featured in " + articleDataArray.join(" and ")
+    );
     let mainImgSrc = array[i].image;
     let mainTitle = document.createElement("h1");
     let mainDesc = document.createElement("h2");
@@ -153,21 +155,17 @@ function buildSuggestions(array) {
 
     //create the tags
     for (let j = 0; j < array[i].tags.length; j++) {
-      let imageLink = tags[array[i].tags[j]].image;
       let text = document.createTextNode(tags[array[i].tags[j]].name);
 
-      let tagImage = document.createElement("img");
       let tagText = document.createElement("span");
       let tag = document.createElement("div");
 
-      tagImage.classList.add("tag-image");
       tagText.classList.add("tag-text");
       tag.classList.add("article-tag");
 
-      tagImage.src = imageLink;
       tagText.appendChild(text);
+      tag.style.backgroundColor = tags[array[i].tags[j]].color;
 
-      tag.appendChild(tagImage);
       tag.appendChild(tagText);
 
       document.querySelectorAll(".post-tags-article")[i].appendChild(tag);
@@ -181,21 +179,17 @@ function setCategoryAndTags(givenCategory, allTags) {
   let tagBox = document.querySelector(".article-tags");
 
   for (let i = 0; i < allTags.length; i++) {
-    let imageLink = tags[allTags[i]].image;
     let text = document.createTextNode(tags[allTags[i]].name);
 
-    let tagImage = document.createElement("img");
     let tagText = document.createElement("span");
     let tag = document.createElement("div");
 
-    tagImage.classList.add("tag-image");
     tagText.classList.add("tag-text");
     tag.classList.add("article-tag");
 
-    tagImage.src = imageLink;
     tagText.appendChild(text);
+    tag.style.backgroundColor = tags[allTags[i]].color;
 
-    tag.appendChild(tagImage);
     tag.appendChild(tagText);
     if (tagBox != null) {
       tagBox.appendChild(tag);
@@ -203,11 +197,11 @@ function setCategoryAndTags(givenCategory, allTags) {
   }
 
   var linkBox = document.querySelector(".article-type");
-  var linkString = "";
+  var linkString = "Featured in ";
   if (linkBox != null) {
     for (let i = 0; i < givenCategory.length; i++) {
       if (i != 0) {
-        linkString += ", ";
+        linkString += " and ";
       }
       linkString +=
         '<a href="' +

@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Add this to general.js
+    
+    title: `test`,
+    link: "https://www.acquirable.ch/articles/test-test1",
+    image:
+      "https://www.acquirable.ch/articles/test-test1/test.jpg",
+    description: `test`,
+    category: [0],
+    tags: [0],
+    articleId: test1,
+    keyword: "test",
+    affiliate: "",
+  
+-->
+
+<head>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="icon" href="../../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="test">
+    <title>Acquirable | test</title>
+</head>
+<body>
+    <div class="header"></div>
+    <div class="container">
+        <div class="article">
+            <div class="art-header">
+                <img
+                src="test.jpg"
+                alt="title-img" class="title-img">
+                <h1 class="title">test</h1>
+                <div class="article-type">
+                </div>
+                <div class="article-tags">
+                </div>
+                <h2 class="description">test</h2>
+                <div class="info">
+                    <p>05/21/25</p>
+                </div>
+                <div class="actions-container" id="upperShare">
+                    <button onclick="shareArticleLink()" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;"  anaid="upperShareButton">
+                        <span class="tag-link-text">Share Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class='text-container'>
+<p class='article-text'>Test1</p>
+<p class='article-text'>This is a test.</p>
+
+        <div class="article-container" style="border-top: 1px solid #e7e7e7; padding: 50px 0; margin: 50px 0 0 0;">
+                    <div class="sub-title" style="text-align: center;">Popular Articles for You</div>
+                </div>
+        </div>
+        
+            <h1 class="main-quote">Everything is Acquirable.</h1>
+        </div>
+    </div>
+    </div>
+    <div class="actions-container" id="lowerShare">
+        <button onclick="shareArticleLink()" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;"  anaid="lowerShareButton">
+            <span class="tag-link-text">Share Article</span>
+        </button>
+    </div>
+    <div class="share-alert-container" id="share-alert-container">
+        <div class="share-alert">
+            <p class="share-header">Thank You!</p>
+            <p class="share-desc">The article link is copied to clipboard.</p>
+            <button onclick="removeMessage();" class="action-content" anaid="closeMessageButton">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+        <div class="explanation" onclick="hideExplanation()" anaid="closeExplanationButton">
+        <div class="explanation-content">
+            <div class="explanation-title"></div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../../assets/general.js"></script>
+    <script src="../../assets/article.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setPageAnaId("article_test1");
+        findArticleData(test1);
+    </script>
+</body>
+</html>
