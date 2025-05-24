@@ -17,13 +17,13 @@ const headerLinks = [
     title: "Articles",
     link: "https://www.acquirable.ch/articles",
     description:
-      "Lifelong learning is fantastic! On <i>The Magic of Learning</i>, you find fascinating articles about learning advice, methods, tools, techniques and many other inspiring ideas.",
+      "Learning is magic available to everyone. Explore concise articles about a variety of topics.",
   },
   {
     title: "Projects",
     link: "https://www.acquirable.ch/projects",
     description:
-      "Every complex topic can be explained simply without dumbing it down. To showcase this, I created <i>Acquirable Topics</i>, a library full of interesting articles about complex topics and ideas, presented in clear and simple terms.",
+      "Explore everything I (Lior) have built - and get ready for what's to come.",
   },
   {
     title: "Acquirable Book Club",
@@ -59,6 +59,17 @@ const tags = [
 
 //the list of all articles (please add new articles at the top)
 const allArticles = [
+  {
+    title: `My GitHub Account`,
+    link: "https://github.com/lior-acqu",
+    image: "https://www.acquirable.ch/assets/github.jpg",
+    description: `Explore my some of my most exciting coding projects on my GitHub page.`,
+    category: [1],
+    tags: [4],
+    articleId: null,
+    keyword: "github",
+    affiliate: "",
+  },
   {
     title: `Medieval Reasons Why “Hustle Culture” Is Pointless`,
     link: "https://www.acquirable.ch/articles/medieval-reason-8",

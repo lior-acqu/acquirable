@@ -124,7 +124,7 @@ function buildMainPost(array, page) {
   //check if there is an entry
   if (array.length == 0) {
     document.querySelector(".article-container").innerHTML =
-      "<img src='../../noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring articles.</h1>";
+      "<img src='../../noresults.jpg' alt='alt' class='article-img' style='max-width: 975px; width: 80%; text-align: center;'><h1 class='main-quote'>Can’t find what you need? Adjust your filters to discover inspiring things.</h1>";
   }
   for (let i = 0; i < array.length; i++) {
     //build the necessary HTML structure for every article
@@ -225,7 +225,6 @@ function buildBook(array, page) {
     articleLink.appendChild(mainImg);
 
     //alternate between image and text being left or right if inner window width is big enough
-    bookContainer.appendChild(articleLink);
     bookContainer.innerHTML += titleLineFlex;
 
     if (i % 2 == 0) {
@@ -238,6 +237,7 @@ function buildBook(array, page) {
         .querySelectorAll(".book-flex")
         [Math.floor((i + 1) / 2) - 1].appendChild(bookContainer);
     }
+    bookContainer.appendChild(articleLink);
     bookContainer.appendChild(bookTitle);
     bookContainer.appendChild(mainDesc);
   }
