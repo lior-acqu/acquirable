@@ -307,3 +307,5 @@ print(html_frame)
 # Write the content to an HTML file (called index_.html not to overwrite any real files)
 with open(f"{fileName}.html", "w", encoding="utf-8") as file:
     file.write(html_frame)
+
+# %%
