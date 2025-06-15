@@ -60,9 +60,20 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `The Book of Joy`,
+    link: "https://www.acquirable.ch/book-club/the-book-of-joy-10",
+    image: "https://www.acquirable.ch/book-club/the-book-of-joy-10/title.jpg",
+    description: `"The Book of Joy" combines knowledge from science, the Christian Archbishop Desmond Tutu, and the Buddhist leader Dalai Lama to answer one question: How can we find more joy? Explore the answer in this article.`,
+    category: [2, 0],
+    tags: [0, 1],
+    articleId: 10,
+    keyword: "the book of joy",
+    affiliate: "",
+  },
+  {
     title: `Why Should We Be Curious?`,
-    link: "https://www.acquirable.ch/articles/curiosity-9",
-    image: "https://www.acquirable.ch/articles/curiosity-9/title.jpg",
+    link: "https://www.acquirable.ch/articles/why-curiosity-9",
+    image: "https://www.acquirable.ch/articles/why-curiosity-9/title.jpg",
     description: `We are always being told to “be curious” and “stay curious”, more often than not by myself. But why is this the case? Why is curiosity so amazing? Here are the answers.`,
     category: [0],
     tags: [0, 1, 7],

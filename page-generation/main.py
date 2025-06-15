@@ -147,11 +147,11 @@ keyword = input("Search keyword: ")
 affiliate = input("Affiliate link (leave empty if not relevant): ")
 
 # generate link
-link = f"https://www.acquirable.ch/{folders[categories[0]]}/{keyword}-{artId}.html"
+link = f"https://www.acquirable.ch/{folders[categories[0]]}/{keyword}-{artId}"
 
 
 # generate the filename, very similar to link
-fileName = f"{folders[categories[0]]}-{keyword}-{artId}.html"
+fileName = f"{folders[categories[0]]}-{keyword}-{artId}"
 
 
 # adds description paragraphs
@@ -199,7 +199,7 @@ while not finishedContent:
         </div>
         """
         finishedContent = True
-    else:
+    elif len(newElement) > 1:
         addText(newElement)
 
 
