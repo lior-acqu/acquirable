@@ -177,23 +177,13 @@ function buildSuggestions(array) {
 function setCategoryAndTags(givenCategory, allTags) {
   category = givenCategory;
   let tagBox = document.querySelector(".article-tags");
+  let tag = tags[allTags[0]].name;
 
-  for (let i = 0; i < allTags.length; i++) {
-    let text = document.createTextNode(tags[allTags[i]].name);
-
-    let tagText = document.createElement("span");
-    let tag = document.createElement("div");
-
-    tagText.classList.add("tag-text");
-    tag.classList.add("article-tag");
-
-    tagText.appendChild(text);
-    tag.style.backgroundColor = tags[allTags[i]].color;
-
-    tag.appendChild(tagText);
-    if (tagBox != null) {
-      tagBox.appendChild(tag);
-    }
+  for (let i = 1; i < allTags.length; i++) {
+    tag += ", " + tags[allTags[i]].name;
+  }
+  if (tagBox != null) {
+    tagBox.innerHTML = tag;
   }
 
   var linkBox = document.querySelector(".article-type");

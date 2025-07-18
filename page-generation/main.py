@@ -15,6 +15,9 @@ headDescription = ""
 articleContent = ""
 fileName = ""
 folders = ["articles", "projects", "book-club"]
+headingCounter = 0
+headingContent = ""
+realHeadingContent = ""
 
 # adding a normal text paragraph
 def addText(textInput):
@@ -30,6 +33,7 @@ def addText(textInput):
 
 # adding a sub-title
 def addSubTitle():
+    headingCounter += 1
     global articleContent, currentContainer
     # close graphic if not yet closed
     if currentContainer != "text-container":
@@ -39,10 +43,13 @@ def addSubTitle():
         <div class="text-container">\n
         """
     textInput = input("Text: ")
-    articleContent = articleContent +  f"<div class='sub-title'>{textInput}</div>\n"
+    articleContent = articleContent +  f"<div class='sub-title' id='{headingCounter}'>{textInput}</div>\n"
+    headingContent = headingContent + f'<a class="heading two" href="#{headingCounter}"></a>'
+    realHeadingContent = realHeadingContent + f'<a class="heading real-two" href="#{headingCounter}">{textInput}</a>
 
 # adding a sub-sub-title
 def addSubSubTitle():
+    headingCounter += 1
     global articleContent, currentContainer
     # close graphic if not yet closed
     if currentContainer != "text-container":
@@ -52,7 +59,9 @@ def addSubSubTitle():
         <div class="text-container">\n
         """
     textInput = input("Text: ")
-    articleContent = articleContent +  f"<div class='sub-sub-title'>{textInput}</div>\n"
+    articleContent = articleContent +  f"<div class='sub-sub-title' id='{headingCounter}'>{textInput}</div>\n"
+    headingContent = headingContent + f'<a class="heading two" href="#{headingCounter}"></a>'
+    realHeadingContent = realHeadingContent + f'<a class="heading real-two" href="#{headingCounter}">{textInput}</a>
 
 # adding a bullet-container
 def addBulletContainer():
@@ -237,6 +246,12 @@ html_frame = f"""<!DOCTYPE html>
     <title>Acquirable | {title}</title>
 </head>
 <body>
+    <div class="table-of-contents">
+        {headingContent}
+        <div class="real-table-of-contents">
+            {realHeadingContent}
+        </div>
+    </div>
     <div class="header"></div>
     <div class="container">
         <div class="article">
@@ -254,7 +269,7 @@ html_frame = f"""<!DOCTYPE html>
                     <p>{articleDate}</p>
                 </div>
                 <div class="actions-container" id="upperShare">
-                    <button onclick="shareArticleLink()" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;"  anaid="upperShareButton">
+                    <button onclick="shareArticleLink()" class="article-tag" anaid="upperShareButton">
                         <span class="tag-link-text">Share Article</span>
                     </button>
                 </div>
@@ -265,7 +280,7 @@ html_frame = f"""<!DOCTYPE html>
     </div>
     </div>
     <div class="actions-container" id="lowerShare">
-        <button onclick="shareArticleLink()" class="article-tag" style="border: 1px solid #515cd4; color:#515cd4;"  anaid="lowerShareButton">
+        <button onclick="shareArticleLink()" class="article-tag" anaid="lowerShareButton">
             <span class="tag-link-text">Share Article</span>
         </button>
     </div>

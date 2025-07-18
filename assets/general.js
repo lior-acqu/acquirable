@@ -26,7 +26,13 @@ const headerLinks = [
       "Explore everything I (Lior) have built - and get ready for what's to come.",
   },
   {
-    title: "Acquirable Book Club",
+    title: "Book Club",
+    link: "https://www.acquirable.ch/book-club",
+    description:
+      "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. In the <i>Acquirable Book Club</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
+  },
+  {
+    title: "Newsletter",
     link: "https://www.acquirable.ch/book-club",
     description:
       "Books are one of the best inventions of all time! They enable us to consume knowledge that took others ages to acquire. In the <i>Acquirable Book Club</i>, I will present the best books I have ever read: books that inspired me and sometimes significantly improved my life.",
@@ -60,9 +66,20 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `Everything You Need to Know about Color`,
+    link: "https://www.acquirable.ch/articles/color-theory-11",
+    image: "https://www.acquirable.ch/articles/color-theory-11/title.png",
+    description: `Colors are everywhere. They dominate our perception of reality, our emotions, and our understanding of beauty and art. In this article, we explore the fascinating world of color theory.`,
+    category: [0],
+    tags: [3],
+    articleId: 11,
+    keyword: "color-theory",
+    affiliate: "",
+  },
+  {
     title: `The Book of Joy`,
     link: "https://www.acquirable.ch/book-club/the-book-of-joy-10",
-    image: "https://www.acquirable.ch/book-club/the-book-of-joy-10/title.jpg",
+    image: "https://www.acquirable.ch/book-club/the-book-of-joy-10/title.png",
     description: `"The Book of Joy" combines knowledge from science, the Christian Archbishop Desmond Tutu, and the Buddhist leader Dalai Lama to answer one question: How can we find more joy? Explore the answer in this article.`,
     category: [2, 0],
     tags: [0, 1],
@@ -241,8 +258,7 @@ function loadFooter() {
 }
 
 function loadHeader() {
-  var finalLink =
-    '<a href="https://www.acquirable.ch"><img src="../../assets/Acquirable-white-1.png" alt="logo" class="logo"></a><div class="header-link-flex">';
+  var finalLink = "<div class='header-link-flex'>";
   for (i = 0; i < headerLinks.length; i++) {
     finalLink +=
       '<a href="' +
@@ -263,6 +279,8 @@ function loadHeader() {
   }
   finalLink +=
     '<img src="../../assets/menu.png" class="menu-icon"  onclick="closeDropDown();"></div></div>';
+  finalLink +=
+    '<a class="logo-container" href="https://www.acquirable.ch"><img src="../../assets/Acquirable-white-1.png" alt="logo" class="logo"></a>S';
 
   var header = document.querySelector(".header");
   header.innerHTML = finalLink;
