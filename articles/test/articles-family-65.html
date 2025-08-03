@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Add this to general.js
+    {
+        
+    title: `My Family`,
+    link: "https://www.acquirable.ch/articles/family-65",
+    image:
+      "https://www.acquirable.ch/articles/family-65/title.jpg",
+    description: `This is my family of 10 people.`,
+    category: [0],
+    tags: [4],
+    articleId: 65,
+    keyword: "family",
+    affiliate: "",
+  
+    }
+-->
+
+<head>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="icon" href="../../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="This is my family of 10 people.">
+    <title>Acquirable | My Family</title>
+</head>
+<body>
+    <div class="table-of-contents">
+        <a class="heading" href="#1"></a><a class="heading two" href="#2"></a><a class="heading two" href="#3"></a><a class="heading two" href="#4"></a><a class="heading two" href="#5"></a><a class="heading two" href="#6"></a><a class="heading" href="#7"></a><a class="heading two" href="#8"></a><a class="heading" href="#9"></a>
+        <div class="real-table-of-contents">
+            <a class="real-heading" href="#1">My Nuclear Family</a><a class="real-heading real-two" href="#2">My Brother</a><a class="real-heading real-two" href="#3">My Sister</a><a class="real-heading real-two" href="#4">My Mother</a><a class="real-heading real-two" href="#5">My Father</a><a class="real-heading" href="#6">My Grandparents (only one side bc I'm lazy)</a><a class="real-heading real-two" href="#7">My Meemaw</a><a class="real-heading real-two" href="#8">Always stinky.</a><a class="real-heading" href="#9">Sources</a>
+        </div>
+    </div>
+    <div class="header"></div>
+    <div class="container">
+        <div class="article">
+            <div class="art-header">
+                <img
+                src="title.jpg"
+                alt="title-img" class="title-img">
+                <h1 class="title">My Family</h1>
+                <div class="article-type">
+                </div>
+                <div class="article-tags">
+                </div>
+                <h2 class="description">This is my family of 10 people.</h2>
+                <div class="info">
+                    <p>07/18/25</p>
+                </div>
+                <div class="actions-container" id="upperShare">
+                    <button onclick="shareArticleLink()" class="article-tag" anaid="upperShareButton">
+                        <span class="tag-link-text">Share Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class='text-container'>
+<div class='sub-title' id='1'>My Nuclear Family</div>
+<div class='sub-sub-title' id='2'>My Brother</div>
+<p class='article-text'>He is 12.</p>
+<div class='sub-sub-title' id='3'>My Sister</div>
+<p class='article-text'>She is annoying.</p>
+<div class='sub-sub-title' id='4'>My Mother</div>
+<p class='article-text'>Queen.</p>
+<div class='sub-sub-title' id='5'>My Father</div>
+<p class='article-text'>Legend.</p>
+<div class='sub-title' id='6'>My Grandparents (only one side bc I'm lazy)</div>
+<div class='sub-sub-title' id='7'>My Meemaw</div>
+<div class='sub-sub-title' id='8'>Always stinky.</div>
+<p class='article-text'>This is a longer paragrpah. fkjlj lbkjsa ba bla bla ldkfjaojf lkdfjalskjblub lbublbkdlfj la dlkjldsajflkdsjf lkdsjflk djfk ljdlkf jdslkf jdlkf jlkdsjf lkdsjf lkds jflkd jflkdsjf ölkjdslkfjdslkfje oijfewoi joirhg rn.</p>
+<div class='sub-title' id='9'>Sources</div>
+<div class='source-container'><a class='source' target='_blank' href='ldskjaldfj.com' anaid='sourceButton'>lkdjfsjsafd</a>
+</div>
+
+        <div class="article-container" style="border-top: 1px solid #e7e7e7; padding: 50px 0; margin: 50px 0 0 0;">
+                    <div class="sub-title" style="text-align: center;">Popular Articles for You</div>
+                </div>
+        </div>
+        
+            <h1 class="main-quote">Everything is Acquirable.</h1>
+        </div>
+    </div>
+    </div>
+    <div class="actions-container" id="lowerShare">
+        <button onclick="shareArticleLink()" class="article-tag" anaid="lowerShareButton">
+            <span class="tag-link-text">Share Article</span>
+        </button>
+    </div>
+    <div class="share-alert-container" id="share-alert-container">
+        <div class="share-alert">
+            <p class="share-header">Thank You!</p>
+            <p class="share-desc">The article link is copied to clipboard.</p>
+            <button onclick="removeMessage();" class="action-content" anaid="closeMessageButton">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+        <div class="explanation" onclick="hideExplanation()" anaid="closeExplanationButton">
+        <div class="explanation-content">
+            <div class="explanation-title"></div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../../assets/general.js"></script>
+    <script src="../../assets/article.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setPageAnaId("article_65");
+        findArticleData(65);
+    </script>
+</body>
+</html>

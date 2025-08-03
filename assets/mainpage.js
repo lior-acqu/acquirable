@@ -320,6 +320,7 @@ function showDropdownFilters() {
 }
 
 // makes the header solid and transparent
+/*
 function changeHeader() {
   if (noHeader == false) {
     if (window.scrollY > 0) {
@@ -342,8 +343,9 @@ function changeHeader() {
       }
     }
   }
-}
+}*/
 
+/*
 function initialHeaderChange() {
   // initially changes header
   document.querySelector(".logo").src = "../../assets/Acquirable-white.png";
@@ -353,7 +355,7 @@ function initialHeaderChange() {
   for (i = 0; i < headerLinks.length; i++) {
     document.querySelectorAll(".header-link")[i].style.color = "white";
   }
-}
+}*/
 
 function handleResize() {}
 

@@ -33,8 +33,8 @@ def addText(textInput):
 
 # adding a sub-title
 def addSubTitle():
+    global articleContent, currentContainer, headingCounter, headingContent, realHeadingContent
     headingCounter += 1
-    global articleContent, currentContainer
     # close graphic if not yet closed
     if currentContainer != "text-container":
         currentContainer = "text-container"
@@ -44,13 +44,13 @@ def addSubTitle():
         """
     textInput = input("Text: ")
     articleContent = articleContent +  f"<div class='sub-title' id='{headingCounter}'>{textInput}</div>\n"
-    headingContent = headingContent + f'<a class="heading two" href="#{headingCounter}"></a>'
-    realHeadingContent = realHeadingContent + f'<a class="heading real-two" href="#{headingCounter}">{textInput}</a>
+    headingContent = headingContent + f'<a class="heading" href="#{headingCounter}"></a>'
+    realHeadingContent = realHeadingContent + f'<a class="real-heading" href="#{headingCounter}">{textInput}</a>'
 
 # adding a sub-sub-title
 def addSubSubTitle():
+    global articleContent, currentContainer, headingCounter, headingContent, realHeadingContent
     headingCounter += 1
-    global articleContent, currentContainer
     # close graphic if not yet closed
     if currentContainer != "text-container":
         currentContainer = "text-container"
@@ -61,7 +61,7 @@ def addSubSubTitle():
     textInput = input("Text: ")
     articleContent = articleContent +  f"<div class='sub-sub-title' id='{headingCounter}'>{textInput}</div>\n"
     headingContent = headingContent + f'<a class="heading two" href="#{headingCounter}"></a>'
-    realHeadingContent = realHeadingContent + f'<a class="heading real-two" href="#{headingCounter}">{textInput}</a>
+    realHeadingContent = realHeadingContent + f'<a class="real-heading real-two" href="#{headingCounter}">{textInput}</a>'
 
 # adding a bullet-container
 def addBulletContainer():

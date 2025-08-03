@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="assets/styles.css">
+    <link rel="icon" href="assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content='Lifelong learning is amazing, fun and available to everyone! Acquirable supports you on your journey of learning with interesting articles.'>
+    <title>Acquirable | Home</title>
+</head>
+<body>
+    <div class="header">
+    </div>
+    <div class="container">
+        <div class="page-content">
+            <div class="start-view">
+                <div class="non-newsletter">
+                    <div class="feature-articles">
+                        <div id="feature-left">
+                            <img src="flowers.jpg" alt="feature title image left" class="feature-img">
+                            <a href="https://acquirable.ch/articles" class="header-link">FEATURED IN ARTICLES</a>
+                            <h2 class="medium-title">The Art of Art</h2>
+                            <p class="about-text">I am a soon-to-be engineering student and a devoted lifelong learner. I strongly believe in two things: I believe that curiosity and learning are key to a happy life and a better world in general. I also believe that everyone can learn whatever they want if they follow healthy beliefs and systems.</p>
+                        </div>
+                        <div id="feature-right"></div>
+                    </div>
+                    <div class="about-me">
+                        <div style="margin-right: 32px;">
+                            <h1 class="main-page-title">Hi, I am Lior, the Creator of Acquirable.</h1>
+                            <p class="about-text">I am a soon-to-be engineering student and a devoted lifelong learner. I strongly believe in two things: I believe that curiosity and learning are key to a happy life and a better world in general. I also believe that everyone can learn whatever they want if they follow healthy beliefs and systems.</p>
+                            <a href="https://acquirable.ch/about" class="article-tag big-button">Read More about Acquirable</a>
+                        </div>
+                        <img src="liorPNG.png" alt="lior" class="me-img">
+                    </div>
+                </div>
+                <div class="newsletter">
+                    <div style="width: 100%; display: flex; align-items: center; justify-content: center;">
+                    <img src="./assets/nllogo.png" alt="newsletter-logo" class="newsletter-img"></div>
+                    <h1 class="main-page-title">The A-C-Q-U Newsletter</h1>
+                    <div class="main-page-quote">“The 4-step formula to a life enriched by effective and enjoyable learning.”</div>
+                    <p class="about-text" style="font-weight: 600;">Once a week, you will receive an email by me with the following contents:</p>
+                    <p class="about-text"><b>A - Acquired:</b> An article, quote, idea, fact, thought, or something else to learn about</p>
+                    <p class="about-text"><b>C - Created:</b> Things I am creating or have recently created</p>
+                    <p class="about-text"><b>Q - Questioned:</b> An interesting question for you to think about</p>
+                    <p class="about-text"><b>U - Uncovered:</b> An valuable recommendation from my side</p>
+                    <p class="about-text" style="font-weight: 600;">If that sounds like something you enjoy, feel free to subscribe for free to the newsletter!</p>
+                    <a target="_blank" href="https://acqu.substack.com" style="background-color: #FF0051; color: white;" class="article-tag big-button">Subscribe for Free</a>
+                        <p class="newsletter-note">By clicking this link, you will get to a form where you can enter your email address. By doing so, you will be signed up to my free newsletter! You can sign out and come back whenever you want. Feel free to also read Acquirable's <a href="https://acuqirable.ch/privacy-policy">privacy policy</a>.</p>
+                </div>
+            </div>
+            <div class="main-line">
+                <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 80px; width: auto; margin-bottom: 20px;" id="articles">
+                <div class="tag-filter">
+                </div>
+                <div class="article-container">
+
+                </div> 
+            </div>
+        </div>
+    </div>
+    <div class="search-container">
+        <input type="text" class="search-ipt" id="ipt" placeholder="Search" oninput="searchArticle();">
+        <button class="close-search" onclick="closeSearch()"><img src="assets/x_blue.png" class="menu-icon" onclick="closeDropDown();"></button>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 70px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="assets/general.js"></script>
+    <script src="assets/mainpage.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setPageAnaId("mainPage");
+        setCategory(null);
+        curateMainPageContent(category, null, 0);
+        displayTagFilters();
+    </script>
+</body>
+</html>

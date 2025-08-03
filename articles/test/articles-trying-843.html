@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<!-- Add this to general.js
+    {
+        
+    title: `Trying Again`,
+    link: "https://www.acquirable.ch/articles/trying-843",
+    image:
+      "https://www.acquirable.ch/articles/trying-843/title.jpg",
+    description: `I am trying the feature again.`,
+    category: [0],
+    tags: [4],
+    articleId: 843,
+    keyword: "trying",
+    affiliate: "",
+  
+    }
+-->
+
+<head>
+    <link rel="stylesheet" href="../../assets/styles.css">
+    <link rel="icon" href="../../assets/icon_gray.ico" type="image/x-icon">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="I am trying the feature again.">
+    <title>Acquirable | Trying Again</title>
+</head>
+<body>
+    <div class="table-of-contents">
+        <a class="heading" href="#1"></a><a class="heading two" href="#2"></a><a class="heading two" href="#3"></a><a class="heading" href="#4"></a><a class="heading two" href="#5"></a>
+        <div class="real-table-of-contents">
+            <a class="real-heading" href="#1">This is a Heading Test</a><a class="real-heading real-two" href="#2">This is a Subheading Test</a><a class="real-heading real-two" href="#3">Another One</a><a class="real-heading" href="#4">A Big One Again</a><a class="real-heading real-two" href="#5">A Final One</a>
+        </div>
+    </div>
+    <div class="header"></div>
+    <div class="container">
+        <div class="article">
+            <div class="art-header">
+                <img
+                src="title.jpg"
+                alt="title-img" class="title-img">
+                <h1 class="title">Trying Again</h1>
+                <div class="article-type">
+                </div>
+                <div class="article-tags">
+                </div>
+                <h2 class="description">I am trying this again. Let's hope it works.</h2>
+                <div class="info">
+                    <p>07/18/25</p>
+                </div>
+                <div class="actions-container" id="upperShare">
+                    <button onclick="shareArticleLink()" class="article-tag" anaid="upperShareButton">
+                        <span class="tag-link-text">Share Article</span>
+                    </button>
+                </div>
+            </div>
+            <div class='text-container'>
+<div class='sub-title' id='1'>This is a Heading Test</div>
+<p class='article-text'>It seems to work.</p>
+<div class='sub-sub-title' id='2'>This is a Subheading Test</div>
+<p class='article-text'>Perfect.</p>
+<div class='sub-sub-title' id='3'>Another One</div>
+<p class='article-text'>Nice.</p>
+<div class='sub-title' id='4'>A Big One Again</div>
+<p class='article-text'>Good.</p>
+<div class='sub-sub-title' id='5'>A Final One</div>
+<p class='article-text'>Perfect.</p>
+
+        <div class="article-container" style="border-top: 1px solid #e7e7e7; padding: 50px 0; margin: 50px 0 0 0;">
+                    <div class="sub-title" style="text-align: center;">Popular Articles for You</div>
+                </div>
+        </div>
+        
+            <h1 class="main-quote">Everything is Acquirable.</h1>
+        </div>
+    </div>
+    </div>
+    <div class="actions-container" id="lowerShare">
+        <button onclick="shareArticleLink()" class="article-tag" anaid="lowerShareButton">
+            <span class="tag-link-text">Share Article</span>
+        </button>
+    </div>
+    <div class="share-alert-container" id="share-alert-container">
+        <div class="share-alert">
+            <p class="share-header">Thank You!</p>
+            <p class="share-desc">The article link is copied to clipboard.</p>
+            <button onclick="removeMessage();" class="action-content" anaid="closeMessageButton">
+                <ion-icon name="close-outline"></ion-icon>
+            </button>
+        </div>
+    </div>
+        <div class="explanation" onclick="hideExplanation()" anaid="closeExplanationButton">
+        <div class="explanation-content">
+            <div class="explanation-title"></div>
+            <div class="explanation-text"></div>
+        </div>
+    </div>
+    <div class="footer">
+    </div>
+    <div class="loader">
+        <img src="../../assets/acqu.png" alt="footer-logo" class="footer-logo" style="height: 100px; width: auto;">
+        <h1 class="main-quote" >Everything is Acquirable.</h1>
+    </div>
+    <script src="../../assets/general.js"></script>
+    <script src="../../assets/article.js"></script>
+    <script>
+        loadFooter();
+        loadHeader();
+        setPageAnaId("article_843");
+        findArticleData(843);
+    </script>
+</body>
+</html>

@@ -66,6 +66,18 @@ const tags = [
 //the list of all articles (please add new articles at the top)
 const allArticles = [
   {
+    title: `The Greatest Myth in Learning`,
+    link: "https://www.acquirable.ch/articles/the-greatest-myth-in-learning-12",
+    image:
+      "https://www.acquirable.ch/articles/the-greatest-myth-in-learning-12/title.png",
+    description: `Studying seems really unfair. Some need days of studying, while others only need a few hours. Here's what the most effective students know that others don't.`,
+    category: [0],
+    tags: [6],
+    articleId: 12,
+    keyword: "time and results",
+    affiliate: "",
+  },
+  {
     title: `Everything You Need to Know about Color`,
     link: "https://www.acquirable.ch/articles/color-theory-11",
     image: "https://www.acquirable.ch/articles/color-theory-11/title.png",
